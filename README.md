@@ -7,7 +7,8 @@ E dps falta fazer o relatório
 
 
 CENAS:
-criar uma ternária categoria, fase e campeonato
+Left:
+-Add constraints and multiples primary keys on tables
 
 
 A data da categoria era suposto alterar?
