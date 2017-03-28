@@ -1,8 +1,4 @@
---
--- File generated with SQLiteStudio v3.1.1 on seg mar 27 22:01:11 2017
---
--- Text encoding used: System
---
+
 PRAGMA foreign_keys = off;
 BEGIN TRANSACTION;
 
@@ -13,8 +9,9 @@ CREATE TABLE Atleta (
     CC          INTEGER PRIMARY KEY,
     Peso        DECIMAL,
     Altura      INTEGER,
-    EquipaNome  TEXT,
-    TreinadorCC INTEGER
+	EquipaNome TEXT REFERENCES Equipa(Nome),
+	TreinadorCC INTEGER REFERENCES Treinador(CC),
+	CategoriaNome TEXT REFERENCES Categoria(Nome)
 );
 
 
@@ -44,8 +41,8 @@ CREATE TABLE Campeonato (
 DROP TABLE IF EXISTS CampeonatoCategoriaFase;
 
 CREATE TABLE CampeonatoCategoriaFase (
-    IDCampeonato  INTEGER REFERENCES Campeonato (Nome),
-    CategoriaName TEXT    REFERENCES Categoria (Nome),
+    IDCampeonato  INTEGER REFERENCES Campeonato (ID),
+    CategoriaNome TEXT    REFERENCES Categoria (Nome),
     FaseNome      TEXT    REFERENCES Fase (Nome) 
 );
 
@@ -58,8 +55,8 @@ CREATE TABLE Categoria (
     NumMaxParticipantes INTEGER,
     AlturaMinima        INTEGER,
     AlturaMaxima        INTEGER,
-    PesoMinimo          INTEGER,
-    PesoMaximo          INTEGER,
+    PesoMinimo          DECIMAL,
+    PesoMaximo          DECIMAL,
     Genero              CHAR
 );
 
@@ -80,8 +77,9 @@ DROP TABLE IF EXISTS DataCat;
 CREATE TABLE DataCat (
     NomeCategoria TEXT    REFERENCES Categoria (Nome),
     NomeFase      TEXT    REFERENCES Fase (Nome),
+	IDCampeonato  TEXT    REFERENCES Campeonato (ID),
     Dia           INTEGER,
-    Hora          INTEGER
+    Hora          TEXT
 );
 
 
@@ -98,7 +96,7 @@ CREATE TABLE Equipa (
 DROP TABLE IF EXISTS Fase;
 
 CREATE TABLE Fase (
-    Nome CHAR PRIMARY KEY
+    Nome TEXT PRIMARY KEY
 );
 
 
@@ -106,7 +104,7 @@ CREATE TABLE Fase (
 DROP TABLE IF EXISTS Jurado;
 
 CREATE TABLE Jurado (
-    CC     INTEGER,
+    CC     INTEGER PRIMARY KEY,
     JuriID INTEGER REFERENCES Juri (ID) 
 );
 
@@ -131,7 +129,7 @@ CREATE TABLE Pais (
 DROP TABLE IF EXISTS Patrocinio;
 
 CREATE TABLE Patrocinio (
-    Nome  TEXT    PRIMARY KEY,
+    Nome  TEXT PRIMARY KEY,
     Valor INTEGER
 );
 
@@ -143,7 +141,7 @@ CREATE TABLE Pessoa (
     CC             INTEGER PRIMARY KEY,
     Nome           TEXT,
     Morada         TEXT,
-    Genero         TEXT,
+    Genero         CHAR,
     DataNascimento DATE,
     Pais           TEXT    REFERENCES Pais (Pais) 
 );
@@ -154,7 +152,7 @@ DROP TABLE IF EXISTS Premio;
 
 CREATE TABLE Premio (
     CampeonatoID  INTEGER REFERENCES Campeonato (ID),
-    NomeCategoria TEXT    REFERENCES Categoria (Nome),
+    CategoriaNome TEXT    REFERENCES Categoria (Nome),
     Valor         INTEGER
 );
 
