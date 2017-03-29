@@ -6,55 +6,60 @@ BEGIN TRANSACTION;
 DROP TABLE IF EXISTS Atleta;
 
 CREATE TABLE Atleta (
-    CC          INTEGER PRIMARY KEY,
-    Peso        DECIMAL,
-    Altura      INTEGER,
+    CC          INTEGER NOT NULL PRIMARY KEY,
+    Peso        DECIMAL NOT NULL,
+    Altura      DECIMAL NOT NULL,
 	EquipaNome TEXT REFERENCES Equipa(Nome),
 	TreinadorCC INTEGER REFERENCES Treinador(CC),
-	CategoriaNome TEXT REFERENCES Categoria(Nome)
+	CategoriaNome TEXT NOT NULL REFERENCES Categoria(Nome)
 );
+-- Alterar valores do CC para valores existentes
 
 INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (440925049,'Garth George','Ap #626-9050 Nec Avenue','M','1984-03-05','Espanha');
-INSERT INTO Atleta VALUES (586010744,'Louis Raymond','759-2197 Sodales Avenue','M','1984-06-07','Portugal');
-INSERT INTO Atleta VALUES (482036360,'Breanna Hill','Ap #774-9530 Arcu. Street','F','1983-08-22','Portugal');
-INSERT INTO Atleta VALUES (342938934,'Christopher Burke','4843 Pellentesque Rd.','M','1987-08-25','Portugal');
-INSERT INTO Atleta VALUES (337159639,'Julie Carroll','2578 Urna Rd.','F','1984-06-19','Portugal');
-INSERT INTO Atleta VALUES (812457849,'Ayanna Carver','292-7022 Nunc Road','F','1981-02-11','Portugal');
-INSERT INTO Atleta VALUES (706734793,'Reagan Reed','833-6141 Pharetra Road','M','1987-09-09','Portugal');
-INSERT INTO Atleta VALUES (774198838,'Kameko Hogan','P.O. Box 765, 7516 Nisl St.','M','1990-02-11','Portugal');
-INSERT INTO Atleta VALUES (647032341,'Nehru Griffith','P.O. Box 649, 1964 Eu Rd.','F','1981-07-15','Portugal');
-INSERT INTO Atleta VALUES (192724629,'Bradley Ortega','P.O. Box 828, 6173 Vestibulum Rd.','M','1983-11-12','Espanha');
-INSERT INTO Atleta VALUES (649135007,'Georgia Sears','3272 Arcu. St.','F','1987-08-25','Austrália');
-INSERT INTO Atleta VALUES (848746634,'Kiara Jarvis','642-5159 Vivamus Avenue','F','1988-12-12','Portugal');
-INSERT INTO Atleta VALUES (689595583,'Alma Swanson','P.O. Box 427, 9726 Vulputate Ave','F','1981-06-14','Portugal');
-INSERT INTO Atleta VALUES (327760545,'Rudyard Hull','P.O. Box 402, 8601 Consequat Rd.','M','1987-04-10','Portugal');
-INSERT INTO Atleta VALUES (650317465,'Helen Johns','Ap #928-9958 Libero. Ave','F','1981-01-04','Portugal');
-INSERT INTO Atleta VALUES (687667012,'Scarlet Hewitt','P.O. Box 322, 9776 Egestas Rd.','F','1980-04-10','Portugal');
-INSERT INTO Atleta VALUES (687032777,'Macy Day','Ap #111-1051 Urna, St.','F','1989-08-07','Austrália');
-INSERT INTO Atleta VALUES (842725632,'Laith Soto','2416 Ultricies Rd.','F','1985-11-26','Austrália');
-INSERT INTO Atleta VALUES (345776988,'Maxwell Kidd','P.O. Box 751, 8581 Congue. Street','M','1989-04-03','Portugal');
-INSERT INTO Atleta VALUES (759497796,'Dillon Huber','267-715 Phasellus Rd.','F','1988-11-27','Portugal');
-INSERT INTO Atleta VALUES (664020282,'Willow Houston','Ap #933-7342 A, Road','M','1984-06-02','Portugal');
-INSERT INTO Atleta VALUES (452873720,'Pascale Robles','354-9065 Nisi. Rd.','M','1987-04-07','Espanha');
-INSERT INTO Atleta VALUES (279968674,'Mason Patterson','3425 Suscipit Avenue','M','1980-03-10','Portugal');
-INSERT INTO Atleta VALUES (384917137,'Holly Anderson','Ap #294-9531 Sed St.','F','1984-11-24','Portugal');
-INSERT INTO Atleta VALUES (402135087,'Roary Lambert','Ap #434-5438 Eget Avenue','M','1988-10-17','Portugal');
-INSERT INTO Atleta VALUES (268054936,'Emily Atkinson','571-6782 Erat Av.','F','1990-01-31','Portugal');
-INSERT INTO Atleta VALUES (702765534,'Lacota Bowen','Ap #625-5475 Nullam St.','F','1980-04-26','Portugal');
-INSERT INTO Atleta VALUES (867567309,'Justin James','Ap #588-7150 Orci, Ave','M','1983-04-03','Portugal');
-INSERT INTO Atleta VALUES (719370836,'Zephania Swanson','Ap #338-6026 Ultrices. Road','F','1980-05-16','Espanha');
-INSERT INTO Atleta VALUES (214316401,'Baxter Wood','988-6254 Nisi Rd.','M','1985-04-13','Portugal');
-INSERT INTO Atleta VALUES (331316563,'Eleanor Tran','Ap #573-5923 Tempus Street','F','1983-02-25','Portugal');
-INSERT INTO Atleta VALUES (690549936,'Kenneth Sweeney','131-5183 Magna. St.','M','1989-12-15','Portugal');
-INSERT INTO Atleta VALUES (211331354,'Felix Holloway','8564 Fringilla Ave','M','1987-09-26','Espanha');
-INSERT INTO Atleta VALUES (337070355,'Grady Waller','6338 Morbi St.','M','1989-12-01','Austrália');
-INSERT INTO Atleta VALUES (393744021,'Finn Osborn','Ap #731-2522 Vulputate Av.','M','1986-08-23','Espanha');
-INSERT INTO Atleta VALUES (837133825,'Sawyer Bray','555-1353 Mauris St.','M','1985-06-18','Espanha');
-INSERT INTO Atleta VALUES (493487597,'Idola Battle','208-4733 Arcu. Rd.','F','1986-06-01','Portugal');
-INSERT INTO Atleta VALUES (560717123,'Cynthia Floyd','Ap #726-8461 Sodales Road','F','1987-04-07','Espanha');
-INSERT INTO Atleta VALUES (883870725,'Ignatius Holland','1787 Rutrum St.','M','1986-11-01','Portugal');
-INSERT INTO Atleta VALUES (110095596,'Charde Camacho','602-9318 Luctus, Ave','M','1981-05-19','Portugal');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
+
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
+
+
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+
+
 
 
 -- Table: AtletaPatrocinio
@@ -271,6 +276,47 @@ INSERT INTO Pessoa VALUES (767248358,'Nita Ross','Ap #132-1232 Risus. Rd.','F','
 INSERT INTO Pessoa VALUES (581963682,'Cheryl Holland','8479 Auctor St.','F','1989-12-26','Portugal');
 INSERT INTO Pessoa VALUES (246457932,'Pamela Vinson','P.O. Box 999, 9547 Varius. Street','F','1985-11-06','Portugal');
 INSERT INTO Pessoa VALUES (182734034,'Chadwick Prince','1359 Tincidunt, Rd.','M','1982-10-30','Espanha');
+
+INSERT INTO Pessoa VALUES (440925049,'Garth George','Ap #626-9050 Nec Avenue','M','1984-03-05','Espanha');
+INSERT INTO Pessoa VALUES (586010744,'Louis Raymond','759-2197 Sodales Avenue','M','1984-06-07','Portugal');
+INSERT INTO Pessoa VALUES (482036360,'Breanna Hill','Ap #774-9530 Arcu. Street','F','1983-08-22','Portugal');
+INSERT INTO Pessoa VALUES (342938934,'Christopher Burke','4843 Pellentesque Rd.','M','1987-08-25','Portugal');
+INSERT INTO Pessoa VALUES (337159639,'Julie Carroll','2578 Urna Rd.','F','1984-06-19','Portugal');
+INSERT INTO Pessoa VALUES (812457849,'Ayanna Carver','292-7022 Nunc Road','F','1981-02-11','Portugal');
+INSERT INTO Pessoa VALUES (706734793,'Reagan Reed','833-6141 Pharetra Road','M','1987-09-09','Portugal');
+INSERT INTO Pessoa VALUES (774198838,'Kameko Hogan','P.O. Box 765, 7516 Nisl St.','M','1990-02-11','Portugal');
+INSERT INTO Pessoa VALUES (647032341,'Nehru Griffith','P.O. Box 649, 1964 Eu Rd.','F','1981-07-15','Portugal');
+INSERT INTO Pessoa VALUES (192724629,'Bradley Ortega','P.O. Box 828, 6173 Vestibulum Rd.','M','1983-11-12','Espanha');
+INSERT INTO Pessoa VALUES (649135007,'Georgia Sears','3272 Arcu. St.','F','1987-08-25','Austrália');
+INSERT INTO Pessoa VALUES (848746634,'Kiara Jarvis','642-5159 Vivamus Avenue','F','1988-12-12','Portugal');
+INSERT INTO Pessoa VALUES (689595583,'Alma Swanson','P.O. Box 427, 9726 Vulputate Ave','F','1981-06-14','Portugal');
+INSERT INTO Pessoa VALUES (327760545,'Rudyard Hull','P.O. Box 402, 8601 Consequat Rd.','M','1987-04-10','Portugal');
+INSERT INTO Pessoa VALUES (650317465,'Helen Johns','Ap #928-9958 Libero. Ave','F','1981-01-04','Portugal');
+INSERT INTO Pessoa VALUES (687667012,'Scarlet Hewitt','P.O. Box 322, 9776 Egestas Rd.','F','1980-04-10','Portugal');
+INSERT INTO Pessoa VALUES (687032777,'Macy Day','Ap #111-1051 Urna, St.','F','1989-08-07','Austrália');
+INSERT INTO Pessoa VALUES (842725632,'Laith Soto','2416 Ultricies Rd.','F','1985-11-26','Austrália');
+INSERT INTO Pessoa VALUES (345776988,'Maxwell Kidd','P.O. Box 751, 8581 Congue. Street','M','1989-04-03','Portugal');
+INSERT INTO Pessoa VALUES (759497796,'Dillon Huber','267-715 Phasellus Rd.','F','1988-11-27','Portugal');
+INSERT INTO Pessoa VALUES (664020282,'Willow Houston','Ap #933-7342 A, Road','M','1984-06-02','Portugal');
+INSERT INTO Pessoa VALUES (452873720,'Pascale Robles','354-9065 Nisi. Rd.','M','1987-04-07','Espanha');
+INSERT INTO Pessoa VALUES (279968674,'Mason Patterson','3425 Suscipit Avenue','M','1980-03-10','Portugal');
+INSERT INTO Pessoa VALUES (384917137,'Holly Anderson','Ap #294-9531 Sed St.','F','1984-11-24','Portugal');
+INSERT INTO Pessoa VALUES (402135087,'Roary Lambert','Ap #434-5438 Eget Avenue','M','1988-10-17','Portugal');
+INSERT INTO Pessoa VALUES (268054936,'Emily Atkinson','571-6782 Erat Av.','F','1990-01-31','Portugal');
+INSERT INTO Pessoa VALUES (702765534,'Lacota Bowen','Ap #625-5475 Nullam St.','F','1980-04-26','Portugal');
+INSERT INTO Pessoa VALUES (867567309,'Justin James','Ap #588-7150 Orci, Ave','M','1983-04-03','Portugal');
+INSERT INTO Pessoa VALUES (719370836,'Zephania Swanson','Ap #338-6026 Ultrices. Road','F','1980-05-16','Espanha');
+INSERT INTO Pessoa VALUES (214316401,'Baxter Wood','988-6254 Nisi Rd.','M','1985-04-13','Portugal');
+INSERT INTO Pessoa VALUES (331316563,'Eleanor Tran','Ap #573-5923 Tempus Street','F','1983-02-25','Portugal');
+INSERT INTO Pessoa VALUES (690549936,'Kenneth Sweeney','131-5183 Magna. St.','M','1989-12-15','Portugal');
+INSERT INTO Pessoa VALUES (211331354,'Felix Holloway','8564 Fringilla Ave','M','1987-09-26','Espanha');
+INSERT INTO Pessoa VALUES (337070355,'Grady Waller','6338 Morbi St.','M','1989-12-01','Austrália');
+INSERT INTO Pessoa VALUES (393744021,'Finn Osborn','Ap #731-2522 Vulputate Av.','M','1986-08-23','Espanha');
+INSERT INTO Pessoa VALUES (837133825,'Sawyer Bray','555-1353 Mauris St.','M','1985-06-18','Espanha');
+INSERT INTO Pessoa VALUES (493487597,'Idola Battle','208-4733 Arcu. Rd.','F','1986-06-01','Portugal');
+INSERT INTO Pessoa VALUES (560717123,'Cynthia Floyd','Ap #726-8461 Sodales Road','F','1987-04-07','Espanha');
+INSERT INTO Pessoa VALUES (883870725,'Ignatius Holland','1787 Rutrum St.','M','1986-11-01','Portugal');
+INSERT INTO Pessoa VALUES (110095596,'Charde Camacho','602-9318 Luctus, Ave','M','1981-05-19','Portugal');
 
 -- Table: Premio
 DROP TABLE IF EXISTS Premio;
