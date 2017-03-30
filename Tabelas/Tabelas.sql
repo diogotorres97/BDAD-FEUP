@@ -7,57 +7,57 @@ DROP TABLE IF EXISTS Atleta;
 
 CREATE TABLE Atleta (
     CC          INTEGER NOT NULL PRIMARY KEY,
+	Altura      DECIMAL NOT NULL,
     Peso        DECIMAL NOT NULL,
-    Altura      DECIMAL NOT NULL,
-	EquipaNome TEXT REFERENCES Equipa(Nome),
+	EquipaNome TEXT REFERENCES Equipa(EquipaNome),
 	TreinadorCC INTEGER REFERENCES Treinador(CC),
-	CategoriaNome TEXT NOT NULL REFERENCES Categoria(Nome)
+	CategoriaNome TEXT NOT NULL REFERENCES Categoria(CategoriaNome)
 );
--- Alterar valores do CC para valores existentes
+-- Alterar valores do CC para valores existentes e do treinador tambem
 
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,160,62,NULL,NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,150,58,'Gold',NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,145,65,NULL,NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,155,55,NULL,NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,167,49,'Prozis',NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,166,52,'Nike',NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,162,53,'ON',NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,150,55,'USN',NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,153,54,'Dedicated Division',NULL,'Women’s Physique');
+INSERT INTO Atleta VALUES (289443867,157,69,'Gymshark',NULL,'Women’s Physique');
 
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,160,52,'ON',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,166,54,'Nike',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,153,54,'USN',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,152,55,NULL,NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,151,58,NULL,NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,169,60,NULL,NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,172,61,NULL,NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,153,66,NULL,NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,150,65,NULL,NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,1162,64,NULL,NULL,'Women´s Bikini Fitness');
 
 
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,175,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,180,62,'Nike',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,185,62,'ON',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,172,62,'ON',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,192,62,'USN',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,183,62,'USN',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,176,62,'Dedicated Division',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,169,62,'Gymshark',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,172,62,'Prozis',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,176,62,'Prozis',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,182,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,189,62,'4Invictus',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,174,62,'Gymshark',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,176,62,'Nike',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,177,62,NULL,NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,178,62,NULL,NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,179,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,172,62,NULL,NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,173,62,'Gold',NULL,'Men’s Physique');
+INSERT INTO Atleta VALUES (289443867,175,62,'Gold',NULL,'Men’s Physique');
 
 
 
@@ -66,108 +66,186 @@ INSERT INTO Atleta VALUES (289443867,160,62,'Gold',NULL,'Men’s Physique');
 DROP TABLE IF EXISTS AtletaPatrocinio;
 
 CREATE TABLE AtletaPatrocinio (
-    AtletaCC   INTEGER REFERENCES Atleta (CC),
-    NomePatrocinio TEXT REFERENCES Patrocinio (Nome) 
+    AtletaCC   INTEGER NOT NULL REFERENCES Atleta (CC),
+    NomePatrocinio TEXT NOT NULL REFERENCES Patrocinio (PatrocinioNome) 
 );
 
+--Change CC
 
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Gold');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Gold');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Gold');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Nike');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Nike');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Nike');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Nike');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Nike');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Prozis');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Prozis');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Prozis');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Dedicated Division');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Dedicated Division');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Dedicated Division');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Gymshark');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Gymshark');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'Gymshark');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'USN');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'USN');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'USN');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'ON');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'ON');
+INSERT INTO AtletaPatrocinio VALUES (CC, 'ON');
+INSERT INTO AtletaPatrocinio VALUES (CC, '4Invictus');
+INSERT INTO AtletaPatrocinio VALUES (CC, '4Invictus');
+INSERT INTO AtletaPatrocinio VALUES (CC, '4Invictus');
 
 
 -- Table: Campeonato
 DROP TABLE IF EXISTS Campeonato;
 
 CREATE TABLE Campeonato (
-    ID         INTEGER PRIMARY KEY,
-    Nome       TEXT,
-    Local      TEXT,
-    DataInicio DATE,
-    DataFim    DATE,
-    Pais       TEXT    REFERENCES Pais (Pais) 
+    CampeonatoID  INTEGER NOT NULL PRIMARY KEY,
+    Nome       TEXT NOT NULL,
+    DataInicio DATE NOT NULL,
+    DataFim    DATE NOT NULL,
+    Pais       TEXT NOT NULL     REFERENCES Pais (Pais) 
 );
 
 INSERT INTO Campeonato VALUES (1,'Nacional', 'Porto', '2017-07-10', '2017-07-12', 'Portugal');
 INSERT INTO Campeonato VALUES (2,'Regional', 'Esposende', '2017-08-21', '2017-08-23', 'Portugal');
-INSERT INTO Campeonato VALUES (3, 'Distrital', 'Lisboa', '2017-11-07', '2017-11-09', 'Portugal');
-
 
 -- Table: CampeonatoCategoriaFase
 DROP TABLE IF EXISTS CampeonatoCategoriaFase;
 
 CREATE TABLE CampeonatoCategoriaFase (
-    IDCampeonato  INTEGER REFERENCES Campeonato (ID),
-    CategoriaNome TEXT    REFERENCES Categoria (Nome),
-    FaseNome      TEXT    REFERENCES Fase (Nome) 
+    IDCampeonato  INTEGER NOT NULL REFERENCES Campeonato (CampeonatoID),
+    CategoriaNome TEXT  NOT NULL  REFERENCES Categoria (CategoriaNome),
+    FaseNome      TEXT  NOT NULL  REFERENCES Fase (FaseNome) 
 );
 
+INSERT INTO Campeonato VALUES (1, 'Men´s Physique', 'Eliminatoria');
+INSERT INTO Campeonato VALUES (1, 'Men´s Physique', 'Final');
+INSERT INTO Campeonato VALUES (1, 'Women´s Physique', 'Eliminatoria');
+INSERT INTO Campeonato VALUES (1, 'Women´s Physique', 'Final');
+INSERT INTO Campeonato VALUES (1, 'Women´s Bikini Fitness', 'Eliminatoria');
+INSERT INTO Campeonato VALUES (1, 'Women´s Bikini Fitness', 'Final');
+INSERT INTO Campeonato VALUES (2, 'Men´s Physique', 'Eliminatoria');
+INSERT INTO Campeonato VALUES (2, 'Men´s Physique', 'Final');
+INSERT INTO Campeonato VALUES (2, 'Women´s Physique', 'Eliminatoria');
+INSERT INTO Campeonato VALUES (2, 'Women´s Physique', 'Final');
+INSERT INTO Campeonato VALUES (2, 'Women´s Bikini Fitness', 'Eliminatoria');
+INSERT INTO Campeonato VALUES (2, 'Women´s Bikini Fitness', 'Final');
 
 -- Table: Categoria
 DROP TABLE IF EXISTS Categoria;
 
 CREATE TABLE Categoria (
-    Nome                TEXT    PRIMARY KEY,
-    NumMaxParticipantes INTEGER,
-    AlturaMinima        INTEGER,
-    AlturaMaxima        INTEGER,
-    PesoMinimo          DECIMAL,
-    PesoMaximo          DECIMAL,
-    Genero              CHAR
+    Nome                TEXT NOT NULL   PRIMARY KEY,
+    NumMaxParticipantes INTEGER NOT NULL,
+    AlturaMinima        INTEGER NOT NULL,
+    AlturaMaxima        INTEGER NOT NULL,
+    PesoMinimo          DECIMAL NOT NULL,
+    PesoMaximo          DECIMAL NOT NULL,
+    Genero              CHAR NOT NULL
 );
 
-INSERT INTO Categoria VALUES ('Muscular Physique',4, 155, 165, 55, 65, 'M');
-INSERT INTO Categoria VALUES ('Wellness',4, 166, 175, 66, 75, 'M');
-INSERT INTO Categoria VALUES ('Muscular Dominian',4, 176, 185, 76, 85, 'M');
-INSERT INTO Categoria VALUES ('Culturismo Classico',4, 186, 195, 86, 95, 'M');
-INSERT INTO Categoria VALUES ('Culturismo Master',4, 196, 205, 96, 105, 'M');
-INSERT INTO Categoria VALUES ('Women’s Physique',4, 155, 165, 55, 65, 'F');
-INSERT INTO Categoria VALUES ('Bikini Fitness',4, 166, 175, 66, 75, 'F');
-INSERT INTO Categoria VALUES ('Women´s Classic',4, 176, 185, 76, 85, 'F');
-INSERT INTO Categoria VALUES ('Women´s Muscular',4, 186, 195, 86, 95, 'F');
-INSERT INTO Categoria VALUES ('Women´s Master',4, 196, 205, 96, 105, 'F');
+
+--Check Pesos e alturas
+
+INSERT INTO Categoria VALUES ('Men´s Physique',10, 155, 195, 65, 95, 'M');
+INSERT INTO Categoria VALUES ('Men´s Classic',5, 186, 195, 86, 95, 'M');
+INSERT INTO Categoria VALUES ('Culturismo Master',5, 196, 205, 96, 105, 'M');
+INSERT INTO Categoria VALUES ('Women´s Physique',5, 145, 170, 45, 65, 'F');
+INSERT INTO Categoria VALUES ('Women´s Bikini Fitness',5, 145, 175, 50, 75, 'F');
+INSERT INTO Categoria VALUES ('Women´s Classic',5, 176, 185, 76, 85, 'F');
 
 
 -- Table: Classificacao
 DROP TABLE IF EXISTS Classificacao;
 
 CREATE TABLE Classificacao (
-    AtletaCC INTEGER REFERENCES Atleta (CC),
-    JuriID   INTEGER REFERENCES Juri (ID),
-    Pontos   INTEGER
+    AtletaCC INTEGER NOT NULL REFERENCES Atleta (CC),
+    JuriID   INTEGER NOT NULL REFERENCES Juri (JuriID),
+    Pontos   INTEGER NOT NULL
 );
+
+--Corrected CC, ID
+
+INSERT INTO Classificacao VALUES(CC, ID, 2);
+INSERT INTO Classificacao VALUES(CC, ID, 0);
+INSERT INTO Classificacao VALUES(CC, ID, 1);
+INSERT INTO Classificacao VALUES(CC, ID, 5);
+INSERT INTO Classificacao VALUES(CC, ID, 0);
+INSERT INTO Classificacao VALUES(CC, ID, 2);
+INSERT INTO Classificacao VALUES(CC, ID, 4);
+INSERT INTO Classificacao VALUES(CC, ID, 5);
+INSERT INTO Classificacao VALUES(CC, ID, 3);
+INSERT INTO Classificacao VALUES(CC, ID, 1);
+INSERT INTO Classificacao VALUES(CC, ID, 4);
+INSERT INTO Classificacao VALUES(CC, ID, 7);
+INSERT INTO Classificacao VALUES(CC, ID, 8);
+INSERT INTO Classificacao VALUES(CC, ID, 1);
+INSERT INTO Classificacao VALUES(CC, ID, 2);
+INSERT INTO Classificacao VALUES(CC, ID, 0);
+INSERT INTO Classificacao VALUES(CC, ID, 5);
+INSERT INTO Classificacao VALUES(CC, ID, 3);
 
 
 -- Table: DataCat
 DROP TABLE IF EXISTS DataCat;
 
 CREATE TABLE DataCat (
-    NomeCategoria TEXT    REFERENCES Categoria (Nome),
-    NomeFase      TEXT    REFERENCES Fase (Nome),
-	IDCampeonato  TEXT    REFERENCES Campeonato (ID),
-    Dia           INTEGER,
-    Hora          TEXT
+    NomeCategoria TEXT NOT NULL   REFERENCES Categoria (CategoriaNome),
+    NomeFase      TEXT  NOT NULL  REFERENCES Fase (FaseNome),
+	IDCampeonato  TEXT  NOT NULL  REFERENCES Campeonato (CampeonatoID),
+    Dia           INTEGER NOT NULL,
+    Hora          TEXT NOT NULL
 );
 
+--Verificar se tao todos
+
+INSERT INTO DataCat VALUES('Men´s Physique', 'Eliminatoria', 1, 10, '15:00');
+INSERT INTO DataCat VALUES('Men´s Physique', 'Final', 1, 11, '15:00');
+INSERT INTO DataCat VALUES('Men´s Physique', 'Eliminatoria', 2, 21, '15:00');
+INSERT INTO DataCat VALUES('Men´s Physique', 'Final', 2, 22, '15:00');
+INSERT INTO DataCat VALUES('Women´s Physique', 'Eliminatoria', 1, 10, '18:00');
+INSERT INTO DataCat VALUES('Women´s Physique', 'Final', 1, 11, '18:00');
+INSERT INTO DataCat VALUES('Women´s Physique', 'Eliminatoria', 2, 21, '18:00');
+INSERT INTO DataCat VALUES('Women´s Physique', 'Final', 2, 22, '18:00');
+INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 'Eliminatoria', 1, 10, '17:00');
+INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 'Final', 1, 11, '17:00');
+INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 'Eliminatoria', 2, 21, '17:00');
+INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 'Final', 2, 22, '17:00');
 
 -- Table: Equipa
 DROP TABLE IF EXISTS Equipa;
 
 CREATE TABLE Equipa (
-    Nome  TEXT PRIMARY KEY,
-    Local TEXT
+    EquipaNome  TEXT NOT NULL PRIMARY KEY,
+    Local TEXT NOT NULL
 );
+
+--Verificar se estão todos
 
 INSERT INTO Equipa VALUES('Gold', 'Freixieiro');
 INSERT INTO Equipa VALUES('Silver', 'Amadora');
 INSERT INTO Equipa VALUES('Bronze', 'Vila Franca de Xira');
+INSERT INTO Equipa VALUES('ON', 'USA');
+INSERT INTO Equipa VALUES('Dedicated Division', 'Belgic');
+INSERT INTO Equipa VALUES('Nike', 'USA');
+INSERT INTO Equipa VALUES('USN', 'England');
+INSERT INTO Equipa VALUES('Prozis', 'Portugal');
+INSERT INTO Equipa VALUES('Gymshark', 'USA');
 
 
 -- Table: Fase
 DROP TABLE IF EXISTS Fase;
 
 CREATE TABLE Fase (
-    Nome TEXT PRIMARY KEY
+    FaseNome TEXT NOT NULL PRIMARY KEY
 );
 
-INSERT INTO Fase VALUES('Meia-final');
+INSERT INTO Fase VALUES('Eliminatoria´');
 INSERT INTO Fase VALUES('Final');
 
 
@@ -175,54 +253,74 @@ INSERT INTO Fase VALUES('Final');
 DROP TABLE IF EXISTS Jurado;
 
 CREATE TABLE Jurado (
-    CC     INTEGER PRIMARY KEY,
-    JuriID INTEGER REFERENCES Juri (ID) 
+    CC     INTEGER NOT NULL PRIMARY KEY,
+    JuriID INTEGER NOT NULL REFERENCES Juri (JuriID) 
 );
+
+-- change CC
+INSERT INTO Jurado VALUES (CC, 1);
+INSERT INTO Jurado VALUES (CC, 1);
+INSERT INTO Jurado VALUES (CC, 1);
+INSERT INTO Jurado VALUES (CC, 1);
+INSERT INTO Jurado VALUES (CC, 2);
+INSERT INTO Jurado VALUES (CC, 2);
+INSERT INTO Jurado VALUES (CC, 2);
+INSERT INTO Jurado VALUES (CC, 2);
 
 
 -- Table: Juri
 DROP TABLE IF EXISTS Juri;
 
 CREATE TABLE Juri (
-    ID INTEGER PRIMARY KEY
+    JuriID INTEGER NOT NULL PRIMARY KEY
 );
 
-
+INSERT INTO Juri VALUES (1);
+INSERT INTO Juri VALUES (2);
 
 -- Table: Pais
 DROP TABLE IF EXISTS Pais;
 
 CREATE TABLE Pais (
-    Pais TEXT PRIMARY KEY
+    Pais TEXT NOT NULL PRIMARY KEY
 );
 
 INSERT INTO Pais VALUES ('Portugal');
 INSERT INTO Pais VALUES ('Espanha');
 INSERT INTO Pais VALUES ('Austrália');
+INSERT INTO Pais VALUES ('USA');
 
 
 -- Table: Patrocinio
 DROP TABLE IF EXISTS Patrocinio;
 
 CREATE TABLE Patrocinio (
-    Nome  TEXT PRIMARY KEY,
-    Valor INTEGER
+    PatrocinioNome  TEXT  NOT NULL PRIMARY KEY,
+    Valor INTEGER NOT NULL
 );
 
+--verificar se tao todas 
 INSERT INTO Patrocinio VALUES('Nike', 4);
 INSERT INTO Patrocinio VALUES('Prozis', 10);
+INSERT INTO Patrocinio VALUES('4Invictus', 8);
+INSERT INTO Patrocinio VALUES('Gymshark', 5);
+INSERT INTO Patrocinio VALUES('Gold', 2);
+INSERT INTO Patrocinio VALUES('USN', 8);
+INSERT INTO Patrocinio VALUES('ON', 9);
+INSERT INTO Patrocinio VALUES('Dedicated Division', 17);
+
 
 
 -- Table: Pessoa
 DROP TABLE IF EXISTS Pessoa;
 
 CREATE TABLE Pessoa (
-    CC             INTEGER PRIMARY KEY,
-    Nome           TEXT,
-    Morada         TEXT,
-    Genero         CHAR,
-    DataNascimento DATE,
-    Pais           TEXT    REFERENCES Pais (Pais) 
+    CC             INTEGER NOT NULL PRIMARY KEY,
+    Nome           TEXT NOT NULL,
+    Morada         TEXT NOT NULL,
+    Genero         CHAR NOT NULL,
+    DataNascimento DATE NOT NULL,
+    Pais           TEXT NOT NULL   REFERENCES Pais (Pais) 
 );
 
 INSERT INTO Pessoa VALUES (289443867,'Aileen Cohen','4189 Id Road','F','1988-08-26','Portugal');
@@ -322,32 +420,51 @@ INSERT INTO Pessoa VALUES (110095596,'Charde Camacho','602-9318 Luctus, Ave','M'
 DROP TABLE IF EXISTS Premio;
 
 CREATE TABLE Premio (
-    CampeonatoID  INTEGER REFERENCES Campeonato (ID),
-    CategoriaNome TEXT    REFERENCES Categoria (Nome),
-    Valor         INTEGER
+    CampeonatoID  INTEGER NOT NULL REFERENCES Campeonato (CampeonatoID),
+    CategoriaNome TEXT NOT NULL   REFERENCES Categoria (CategoriaNome),
+    Valor         INTEGER NOT NULL
 );
 
+--Verificar se tao todas
+INSERT INTO Premio VALUES(1, 'Men´s Physique', 5000);
+INSERT INTO Premio VALUES(1, 'Women´s Physique', 4500);
+INSERT INTO Premio VALUES(1, 'Women´s Bikini Fitness', 4000);
+INSERT INTO Premio VALUES(2, 'Men´s Physique', 3000);
+INSERT INTO Premio VALUES(2, 'Women´s Physique', 2000);
+INSERT INTO Premio VALUES(2, 'Women´s Bikini Physique', 1000);
 
 -- Table: TipoDePatrocinio
 DROP TABLE IF EXISTS TipoDePatrocinio;
 
 CREATE TABLE TipoDePatrocinio (
-    Tipo       TEXT PRIMARY KEY,
-    Patrocinio TEXT REFERENCES Patrocinio (Nome) 
+    Tipo       TEXT NOT NULL PRIMARY KEY,
+    Patrocinio TEXT NOT NULL  REFERENCES Patrocinio (PatrocinioNome) 
 );
 
 INSERT INTO TipoDePatrocinio VALUES('Sapatilhas', 'Nike');
 INSERT INTO TipoDePatrocinio VALUES('Camisolas', 'Nike');
 INSERT INTO TipoDePatrocinio VALUES('Suplementos', 'Prozis');
+INSERT INTO TipoDePatrocinio VALUES('Suplementos', 'USN');
+INSERT INTO TipoDePatrocinio VALUES('Suplementos', 'ON');
+INSERT INTO TipoDePatrocinio VALUES('Roupa', 'Dedicated Division');
+INSERT INTO TipoDePatrocinio VALUES('Roupa', 'Gymshark');
+INSERT INTO TipoDePatrocinio VALUES('Dinheiro', 'Gold');
 
 -- Table: Treinador
 DROP TABLE IF EXISTS Treinador;
 
 CREATE TABLE Treinador (
-    CC           INTEGER REFERENCES Pessoa (CC),
-    DataDeAdesao DATE,
-    Equipa       TEXT    REFERENCES Equipa (Nome) 
+    CC           INTEGER NOT NULL  REFERENCES Pessoa (CC),
+    DataDeAdesao DATE NOT NULL ,
+    Equipa       TEXT REFERENCES Equipa (EquipaNome) 
 );
+
+--Change CC
+INSERT INTO Treinador VALUES(CC, 25-10-1994, 'ON');
+INSERT INTO Treinador VALUES(CC, 11-03-1992, 'Dedicated Division');
+INSERT INTO Treinador VALUES(CC, 13-02-2010, 'USN');
+INSERT INTO Treinador VALUES(CC, 14-08-2015, NULL);
+INSERT INTO Treinador VALUES(CC, 15-12-1997, NULL);
 
 
 COMMIT TRANSACTION;
