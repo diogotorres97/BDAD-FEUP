@@ -1,19 +1,6 @@
-
-PRAGMA foreign_keys = off;
-BEGIN TRANSACTION;
+PRAGMA foreign_keys = on;
 
 -- Table: Atleta
-DROP TABLE IF EXISTS Atleta;
-
-CREATE TABLE Atleta (
-    CC          INTEGER NOT NULL PRIMARY KEY,
-	Altura      DECIMAL NOT NULL,
-    Peso        DECIMAL NOT NULL,
-	EquipaNome TEXT REFERENCES Equipa(EquipaNome),
-	TreinadorCC INTEGER REFERENCES Treinador(CC),
-	CategoriaNome TEXT NOT NULL REFERENCES Categoria(CategoriaNome)
-);
--- Alterar valores do CC para valores existentes e do treinador tambem
 
 INSERT INTO Atleta VALUES (580495453,160,62,NULL,NULL,'Women’s Physique');
 INSERT INTO Atleta VALUES (730906404,150,58,'Gold',NULL,'Women’s Physique');
@@ -37,7 +24,6 @@ INSERT INTO Atleta VALUES (812457849,153,66,NULL,NULL,'Women´s Bikini Fitness')
 INSERT INTO Atleta VALUES (647032341,150,65,NULL,NULL,'Women´s Bikini Fitness');
 INSERT INTO Atleta VALUES (842725632,162,64,NULL,NULL,'Women´s Bikini Fitness');
 
-
 INSERT INTO Atleta VALUES (440925049,175,62,'Gold',NULL,'Men’s Physique');
 INSERT INTO Atleta VALUES (586010744,180,62,'Nike',NULL,'Men’s Physique');
 INSERT INTO Atleta VALUES (342938934,185,62,'ON',NULL,'Men’s Physique');
@@ -60,18 +46,7 @@ INSERT INTO Atleta VALUES (883870725,173,62,'Gold',NULL,'Men’s Physique');
 INSERT INTO Atleta VALUES (149612512,175,62,'Gold',NULL,'Men’s Physique');
 
 
-
-
 -- Table: AtletaPatrocinio
-DROP TABLE IF EXISTS AtletaPatrocinio;
-
-CREATE TABLE AtletaPatrocinio (
-    AtletaCC   INTEGER NOT NULL REFERENCES Atleta (CC),
-    NomePatrocinio TEXT NOT NULL REFERENCES Patrocinio (PatrocinioNome) 
-);
-
---Change CC
-
 INSERT INTO AtletaPatrocinio VALUES (755367564, 'Gold');
 INSERT INTO AtletaPatrocinio VALUES (640708342, 'Gold');
 INSERT INTO AtletaPatrocinio VALUES (490527968, 'Gold');
@@ -99,59 +74,12 @@ INSERT INTO AtletaPatrocinio VALUES (327760545, '4Invictus');
 INSERT INTO AtletaPatrocinio VALUES (664020282, '4Invictus');
 INSERT INTO AtletaPatrocinio VALUES (774198838, '4Invictus');
 
-
 -- Table: Campeonato
-DROP TABLE IF EXISTS Campeonato;
-
-CREATE TABLE Campeonato (
-    CampeonatoID  INTEGER NOT NULL PRIMARY KEY,
-    Nome       TEXT NOT NULL,
-    DataInicio DATE NOT NULL,
-    DataFim    DATE NOT NULL,
-    Pais       TEXT NOT NULL     REFERENCES Pais (Pais) 
-);
 
 INSERT INTO Campeonato VALUES (1,'Nacional', '2017-07-10', '2017-07-12', 'Portugal');
 INSERT INTO Campeonato VALUES (2,'Regional', '2017-08-21', '2017-08-23', 'Portugal');
 
--- Table: CampeonatoCategoriaFase
-DROP TABLE IF EXISTS CampeonatoCategoriaFase;
-
-CREATE TABLE CampeonatoCategoriaFase (
-    IDCampeonato  INTEGER NOT NULL REFERENCES Campeonato (CampeonatoID),
-    CategoriaNome TEXT  NOT NULL  REFERENCES Categoria (CategoriaNome),
-    FaseNome      TEXT  NOT NULL  REFERENCES Fase (FaseNome) 
-);
-
-INSERT INTO CampeonatoCategoriaFase VALUES (1, 'Men´s Physique', 'Eliminatoria');
-INSERT INTO CampeonatoCategoriaFase VALUES (1, 'Men´s Physique', 'Final');
-INSERT INTO CampeonatoCategoriaFase VALUES (1, 'Women´s Physique', 'Eliminatoria');
-INSERT INTO CampeonatoCategoriaFase VALUES (1, 'Women´s Physique', 'Final');
-INSERT INTO CampeonatoCategoriaFase VALUES (1, 'Women´s Bikini Fitness', 'Eliminatoria');
-INSERT INTO CampeonatoCategoriaFase VALUES (1, 'Women´s Bikini Fitness', 'Final');
-INSERT INTO CampeonatoCategoriaFase VALUES (2, 'Men´s Physique', 'Eliminatoria');
-INSERT INTO CampeonatoCategoriaFase VALUES (2, 'Men´s Physique', 'Final');
-INSERT INTO CampeonatoCategoriaFase VALUES (2, 'Women´s Physique', 'Eliminatoria');
-INSERT INTO CampeonatoCategoriaFase VALUES (2, 'Women´s Physique', 'Final');
-INSERT INTO CampeonatoCategoriaFase VALUES (2, 'Women´s Bikini Fitness', 'Eliminatoria');
-INSERT INTO CampeonatoCategoriaFase VALUES (2, 'Women´s Bikini Fitness', 'Final');
-
 -- Table: Categoria
-DROP TABLE IF EXISTS Categoria;
-
-CREATE TABLE Categoria (
-    Nome                TEXT NOT NULL   PRIMARY KEY,
-    NumMaxParticipantes INTEGER NOT NULL,
-    AlturaMinima        INTEGER NOT NULL,
-    AlturaMaxima        INTEGER NOT NULL,
-    PesoMinimo          DECIMAL NOT NULL,
-    PesoMaximo          DECIMAL NOT NULL,
-    Genero              CHAR NOT NULL
-);
-
-
---Check Pesos e alturas
-
 INSERT INTO Categoria VALUES ('Men´s Physique',10, 155, 195, 65, 95, 'M');
 INSERT INTO Categoria VALUES ('Men´s Classic',5, 186, 195, 86, 95, 'M');
 INSERT INTO Categoria VALUES ('Culturismo Master',5, 196, 205, 96, 105, 'M');
@@ -159,95 +87,58 @@ INSERT INTO Categoria VALUES ('Women´s Physique',5, 145, 170, 45, 65, 'F');
 INSERT INTO Categoria VALUES ('Women´s Bikini Fitness',5, 145, 175, 50, 75, 'F');
 INSERT INTO Categoria VALUES ('Women´s Classic',5, 176, 185, 76, 85, 'F');
 
-
 -- Table: Classificacao
-DROP TABLE IF EXISTS Classificacao;
-
-CREATE TABLE Classificacao (
-    AtletaCC INTEGER NOT NULL REFERENCES Atleta (CC),
-    JuriID   INTEGER NOT NULL REFERENCES Juri (JuriID),
-    Pontos   INTEGER NOT NULL
-);
-
---Corrected CC, ID
-
-INSERT INTO Classificacao VALUES(58049545, 1, 2);
-INSERT INTO Classificacao VALUES(730906404, 2, 0);
-INSERT INTO Classificacao VALUES(659652361, 1, 1);
-INSERT INTO Classificacao VALUES(658211344, 2, 5);
-INSERT INTO Classificacao VALUES(521672026, 1, 0);
-INSERT INTO Classificacao VALUES(526542558, 2, 2);
-INSERT INTO Classificacao VALUES(587215721, 1, 4);
-INSERT INTO Classificacao VALUES(793638147, 2, 5);
-INSERT INTO Classificacao VALUES(774540744, 1, 3);
-INSERT INTO Classificacao VALUES(232493475, 2, 1);
-INSERT INTO Classificacao VALUES(755367564, 1, 4);
-INSERT INTO Classificacao VALUES(640708342, 2, 7);
-INSERT INTO Classificacao VALUES(490527968, 1, 8);
-INSERT INTO Classificacao VALUES(108129603, 2, 1);
-INSERT INTO Classificacao VALUES(289443867, 1, 2);
-INSERT INTO Classificacao VALUES(482036360, 2, 0);
-INSERT INTO Classificacao VALUES(337159639, 1, 5);
-INSERT INTO Classificacao VALUES(812457849, 2, 3);
-INSERT INTO Classificacao VALUES(64703234, 1, 2);
-INSERT INTO Classificacao VALUES(842725632, 2, 0);
-INSERT INTO Classificacao VALUES(440925049, 1, 1);
-INSERT INTO Classificacao VALUES(586010744, 2, 5);
-INSERT INTO Classificacao VALUES(342938934, 1, 0);
-INSERT INTO Classificacao VALUES(706734793, 2, 2);
-INSERT INTO Classificacao VALUES(774198838, 1, 4);
-INSERT INTO Classificacao VALUES(192724629, 2, 5);
-INSERT INTO Classificacao VALUES(327760545, 1, 3);
-INSERT INTO Classificacao VALUES(664020282, 2, 1);
-INSERT INTO Classificacao VALUES(452873720, 1, 4);
-INSERT INTO Classificacao VALUES(279968674, 2, 7);
-INSERT INTO Classificacao VALUES(402135087, 1, 8);
-INSERT INTO Classificacao VALUES(867567309, 2, 1);
-INSERT INTO Classificacao VALUES(214316401, 1, 2);
-INSERT INTO Classificacao VALUES(690549936, 2, 0);
-INSERT INTO Classificacao VALUES(211331354, 1, 5);
-INSERT INTO Classificacao VALUES(337070355, 2, 3);
-INSERT INTO Classificacao VALUES(837133825, 1, 2);
-INSERT INTO Classificacao VALUES(393744021, 2, 0);
-INSERT INTO Classificacao VALUES(883870725, 1, 5);
-INSERT INTO Classificacao VALUES(149612512, 2, 3);
+-- Meter Finais xD
+INSERT INTO Classificacao VALUES(58049545, 1, 2, 'Eliminatoria');
+INSERT INTO Classificacao VALUES(730906404, 2, 0,'Eliminatoria');
+INSERT INTO Classificacao VALUES(659652361, 1, 1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(658211344, 2, 5,'Eliminatoria');
+INSERT INTO Classificacao VALUES(521672026, 1, 0,'Eliminatoria');
+INSERT INTO Classificacao VALUES(526542558, 2, 2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(587215721, 1, 4,'Eliminatoria');
+INSERT INTO Classificacao VALUES(793638147, 2, 5,'Eliminatoria');
+INSERT INTO Classificacao VALUES(774540744, 1, 3,'Eliminatoria');
+INSERT INTO Classificacao VALUES(232493475, 2, 1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(755367564, 1, 4,'Eliminatoria');
+INSERT INTO Classificacao VALUES(640708342, 2, 7,'Eliminatoria');
+INSERT INTO Classificacao VALUES(490527968, 1, 8,'Eliminatoria');
+INSERT INTO Classificacao VALUES(108129603, 2, 1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(289443867, 1, 2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(482036360, 2, 0,'Eliminatoria');
+INSERT INTO Classificacao VALUES(337159639, 1, 5,'Eliminatoria');
+INSERT INTO Classificacao VALUES(812457849, 2, 3,'Eliminatoria');
+INSERT INTO Classificacao VALUES(64703234, 1, 2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(842725632, 2, 0,'Eliminatoria');
+INSERT INTO Classificacao VALUES(440925049, 1, 1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(586010744, 2, 5,'Eliminatoria');
+INSERT INTO Classificacao VALUES(342938934, 1, 0,'Eliminatoria');
+INSERT INTO Classificacao VALUES(706734793, 2, 2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(774198838, 1, 4,'Eliminatoria');
+INSERT INTO Classificacao VALUES(192724629, 2, 5,'Eliminatoria');
+INSERT INTO Classificacao VALUES(327760545, 1, 3,'Eliminatoria');
+INSERT INTO Classificacao VALUES(664020282, 2, 1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(452873720, 1, 4,'Eliminatoria');
+INSERT INTO Classificacao VALUES(279968674, 2, 7,'Eliminatoria');
+INSERT INTO Classificacao VALUES(402135087, 1, 8,'Eliminatoria');
+INSERT INTO Classificacao VALUES(867567309, 2, 1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(214316401, 1, 2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(690549936, 2, 0,'Eliminatoria');
+INSERT INTO Classificacao VALUES(211331354, 1, 5,'Eliminatoria');
+INSERT INTO Classificacao VALUES(337070355, 2, 3,'Eliminatoria');
+INSERT INTO Classificacao VALUES(837133825, 1, 2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(393744021, 2, 0,'Eliminatoria');
+INSERT INTO Classificacao VALUES(883870725, 1, 5,'Eliminatoria');
+INSERT INTO Classificacao VALUES(149612512, 2, 3,'Eliminatoria');
 
 -- Table: DataCat
-DROP TABLE IF EXISTS DataCat;
-
-CREATE TABLE DataCat (
-    NomeCategoria TEXT NOT NULL   REFERENCES Categoria (CategoriaNome),
-    NomeFase      TEXT  NOT NULL  REFERENCES Fase (FaseNome),
-	IDCampeonato  TEXT  NOT NULL  REFERENCES Campeonato (CampeonatoID),
-    Dia           INTEGER NOT NULL,
-    Hora          TEXT NOT NULL
-);
-
---Verificar se tao todos
-
-INSERT INTO DataCat VALUES('Men´s Physique', 'Eliminatoria', 1, 10, '15:00');
-INSERT INTO DataCat VALUES('Men´s Physique', 'Final', 1, 11, '15:00');
-INSERT INTO DataCat VALUES('Men´s Physique', 'Eliminatoria', 2, 21, '15:00');
-INSERT INTO DataCat VALUES('Men´s Physique', 'Final', 2, 22, '15:00');
-INSERT INTO DataCat VALUES('Women´s Physique', 'Eliminatoria', 1, 10, '18:00');
-INSERT INTO DataCat VALUES('Women´s Physique', 'Final', 1, 11, '18:00');
-INSERT INTO DataCat VALUES('Women´s Physique', 'Eliminatoria', 2, 21, '18:00');
-INSERT INTO DataCat VALUES('Women´s Physique', 'Final', 2, 22, '18:00');
-INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 'Eliminatoria', 1, 10, '17:00');
-INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 'Final', 1, 11, '17:00');
-INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 'Eliminatoria', 2, 21, '17:00');
-INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 'Final', 2, 22, '17:00');
+INSERT INTO DataCat VALUES('Men´s Physique', 1, 10, '15:00', 11, '15:00');
+INSERT INTO DataCat VALUES('Men´s Physique', 2, 21, '15:00', 22, '15:00');
+INSERT INTO DataCat VALUES('Women´s Physique',1, 10, '18:00', 11, '18:00');
+INSERT INTO DataCat VALUES('Women´s Physique', 2, 21, '18:00', 22, '18:00');
+INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 1, 10, '17:00', 11, '17:00');
+INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 2, 21, '17:00', 22, '17:00');
 
 -- Table: Equipa
-DROP TABLE IF EXISTS Equipa;
-
-CREATE TABLE Equipa (
-    EquipaNome  TEXT NOT NULL PRIMARY KEY,
-    Local TEXT NOT NULL
-);
-
---Verificar se estão todos
-
 INSERT INTO Equipa VALUES('Gold', 'Freixieiro');
 INSERT INTO Equipa VALUES('Silver', 'Amadora');
 INSERT INTO Equipa VALUES('Bronze', 'Vila Franca de Xira');
@@ -258,27 +149,7 @@ INSERT INTO Equipa VALUES('USN', 'England');
 INSERT INTO Equipa VALUES('Prozis', 'Portugal');
 INSERT INTO Equipa VALUES('Gymshark', 'USA');
 
-
--- Table: Fase
-DROP TABLE IF EXISTS Fase;
-
-CREATE TABLE Fase (
-    FaseNome TEXT NOT NULL PRIMARY KEY
-);
-
-INSERT INTO Fase VALUES('Eliminatoria´');
-INSERT INTO Fase VALUES('Final');
-
-
 -- Table: Jurado
-DROP TABLE IF EXISTS Jurado;
-
-CREATE TABLE Jurado (
-    CC     INTEGER NOT NULL PRIMARY KEY,
-    JuriID INTEGER NOT NULL REFERENCES Juri (JuriID) 
-);
-
--- change CC
 INSERT INTO Jurado VALUES (767248358, 1);
 INSERT INTO Jurado VALUES (581963682, 1);
 INSERT INTO Jurado VALUES (246457932, 1);
@@ -290,22 +161,10 @@ INSERT INTO Jurado VALUES (221811950, 2);
 
 
 -- Table: Juri
-DROP TABLE IF EXISTS Juri;
-
-CREATE TABLE Juri (
-    JuriID INTEGER NOT NULL PRIMARY KEY
-);
-
 INSERT INTO Juri VALUES (1);
 INSERT INTO Juri VALUES (2);
 
 -- Table: Pais
-DROP TABLE IF EXISTS Pais;
-
-CREATE TABLE Pais (
-    Pais TEXT NOT NULL PRIMARY KEY
-);
-
 INSERT INTO Pais VALUES ('Portugal');
 INSERT INTO Pais VALUES ('Espanha');
 INSERT INTO Pais VALUES ('Austrália');
@@ -313,14 +172,6 @@ INSERT INTO Pais VALUES ('USA');
 
 
 -- Table: Patrocinio
-DROP TABLE IF EXISTS Patrocinio;
-
-CREATE TABLE Patrocinio (
-    PatrocinioNome  TEXT  NOT NULL PRIMARY KEY,
-    Valor INTEGER NOT NULL
-);
-
---verificar se tao todas 
 INSERT INTO Patrocinio VALUES('Nike', 4);
 INSERT INTO Patrocinio VALUES('Prozis', 10);
 INSERT INTO Patrocinio VALUES('4Invictus', 8);
@@ -333,16 +184,6 @@ INSERT INTO Patrocinio VALUES('Dedicated Division', 17);
 
 
 -- Table: Pessoa
-DROP TABLE IF EXISTS Pessoa;
-
-CREATE TABLE Pessoa (
-    CC             INTEGER NOT NULL PRIMARY KEY,
-    Nome           TEXT NOT NULL,
-    Morada         TEXT NOT NULL,
-    Genero         CHAR NOT NULL,
-    DataNascimento DATE NOT NULL,
-    Pais           TEXT NOT NULL   REFERENCES Pais (Pais) 
-);
 
 INSERT INTO Pessoa VALUES (289443867,'Aileen Cohen','4189 Id Road','F','1988-08-26','Portugal');
 INSERT INTO Pessoa VALUES (440925049,'Garth George','Ap #626-9050 Nec Avenue','M','1984-03-05','Espanha');
@@ -427,16 +268,8 @@ INSERT INTO Pessoa VALUES (821182407,'Gloria','442-4649 Ipsum. Avenue','F', '199
 INSERT INTO Pessoa VALUES (186799484,'Emily','P.O. Box 373, 1504 Ut Street','F', '1994-08-06','USA');
 INSERT INTO Pessoa VALUES (692598630,'Cara','P.O. Box 758, 1961 In Street','F', '1992-08-03','USA');
 
+
 -- Table: Premio
-DROP TABLE IF EXISTS Premio;
-
-CREATE TABLE Premio (
-    CampeonatoID  INTEGER NOT NULL REFERENCES Campeonato (CampeonatoID),
-    CategoriaNome TEXT NOT NULL   REFERENCES Categoria (CategoriaNome),
-    Valor         INTEGER NOT NULL
-);
-
---Verificar se tao todas
 INSERT INTO Premio VALUES(1, 'Men´s Physique', 5000);
 INSERT INTO Premio VALUES(1, 'Women´s Physique', 4500);
 INSERT INTO Premio VALUES(1, 'Women´s Bikini Fitness', 4000);
@@ -445,13 +278,6 @@ INSERT INTO Premio VALUES(2, 'Women´s Physique', 2000);
 INSERT INTO Premio VALUES(2, 'Women´s Bikini Physique', 1000);
 
 -- Table: TipoDePatrocinio
-DROP TABLE IF EXISTS TipoDePatrocinio;
-
-CREATE TABLE TipoDePatrocinio (
-    Tipo       TEXT NOT NULL PRIMARY KEY,
-    Patrocinio TEXT NOT NULL  REFERENCES Patrocinio (PatrocinioNome) 
-);
-
 INSERT INTO TipoDePatrocinio VALUES('Sapatilhas', 'Nike');
 INSERT INTO TipoDePatrocinio VALUES('Camisolas', 'Nike');
 INSERT INTO TipoDePatrocinio VALUES('Suplementos', 'Prozis');
@@ -462,21 +288,8 @@ INSERT INTO TipoDePatrocinio VALUES('Roupa', 'Gymshark');
 INSERT INTO TipoDePatrocinio VALUES('Dinheiro', 'Gold');
 
 -- Table: Treinador
-DROP TABLE IF EXISTS Treinador;
-
-CREATE TABLE Treinador (
-    CC           INTEGER NOT NULL  REFERENCES Pessoa (CC),
-    DataDeAdesao DATE NOT NULL ,
-    Equipa       TEXT REFERENCES Equipa (EquipaNome) 
-);
-
---Change CC
 INSERT INTO Treinador VALUES(872715048, 25-10-1994, 'ON');
 INSERT INTO Treinador VALUES(350679118, 11-03-1992, 'Dedicated Division');
 INSERT INTO Treinador VALUES(520382478, 13-02-2010, 'USN');
 INSERT INTO Treinador VALUES(162374251, 14-08-2015, NULL);
 INSERT INTO Treinador VALUES(566223289, 15-12-1997, NULL);
-
-
-COMMIT TRANSACTION;
-PRAGMA foreign_keys = on;
