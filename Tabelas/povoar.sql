@@ -1,187 +1,10 @@
 PRAGMA foreign_keys = on;
 
--- Table: Atleta
-
-INSERT INTO Atleta VALUES (580495453,160,62,NULL,NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (730906404,150,58,'Gold',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (659652361,145,65,NULL,NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (658211344,155,55,NULL,NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (521672026,167,49,'Prozis',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (526542558,166,52,'Nike',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (587215721,162,53,'ON',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (793638147,150,55,'USN',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (774540744,153,54,'Dedicated Division',NULL,'Women’s Physique');
-INSERT INTO Atleta VALUES (232493475,157,69,'Gymshark',NULL,'Women’s Physique');
-
-INSERT INTO Atleta VALUES (755367564,160,52,'ON',NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (640708342,166,54,'Nike',NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (490527968,153,54,'USN',NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (108129603,152,55,NULL,NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (289443867,151,58,NULL,NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (482036360,169,60,NULL,NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (337159639,172,61,NULL,NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (812457849,153,66,NULL,NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (647032341,150,65,NULL,NULL,'Women´s Bikini Fitness');
-INSERT INTO Atleta VALUES (842725632,162,64,NULL,NULL,'Women´s Bikini Fitness');
-
-INSERT INTO Atleta VALUES (440925049,175,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (586010744,180,62,'Nike',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (342938934,185,62,'ON',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (706734793,172,62,'ON',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (774198838,192,62,'USN',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (192724629,183,62,'USN',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (327760545,176,62,'Dedicated Division',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (664020282,169,62,'Gymshark',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (452873720,172,62,'Prozis',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (279968674,176,62,'Prozis',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (402135087,182,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (867567309,189,62,'4Invictus',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (214316401,174,62,'Gymshark',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (690549936,176,62,'Nike',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (211331354,177,62,NULL,NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (337070355,178,62,NULL,NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (837133825,179,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (393744021,172,62,NULL,NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (883870725,173,62,'Gold',NULL,'Men’s Physique');
-INSERT INTO Atleta VALUES (149612512,175,62,'Gold',NULL,'Men’s Physique');
-
-
--- Table: AtletaPatrocinio
-INSERT INTO AtletaPatrocinio VALUES (755367564, 'Gold');
-INSERT INTO AtletaPatrocinio VALUES (640708342, 'Gold');
-INSERT INTO AtletaPatrocinio VALUES (490527968, 'Gold');
-INSERT INTO AtletaPatrocinio VALUES (108129603, 'Nike');
-INSERT INTO AtletaPatrocinio VALUES (289443867, 'Nike');
-INSERT INTO AtletaPatrocinio VALUES (482036360, 'Nike');
-INSERT INTO AtletaPatrocinio VALUES (337159639, 'Nike');
-INSERT INTO AtletaPatrocinio VALUES (812457849, 'Nike');
-INSERT INTO AtletaPatrocinio VALUES (647032341, 'Prozis');
-INSERT INTO AtletaPatrocinio VALUES (580495453, 'Prozis');
-INSERT INTO AtletaPatrocinio VALUES (659652361, 'Prozis');
-INSERT INTO AtletaPatrocinio VALUES (440925049, 'Dedicated Division');
-INSERT INTO AtletaPatrocinio VALUES (149612512, 'Dedicated Division');
-INSERT INTO AtletaPatrocinio VALUES (883870725, 'Dedicated Division');
-INSERT INTO AtletaPatrocinio VALUES (393744021, 'Gymshark');
-INSERT INTO AtletaPatrocinio VALUES (837133825, 'Gymshark');
-INSERT INTO AtletaPatrocinio VALUES (337070355, 'Gymshark');
-INSERT INTO AtletaPatrocinio VALUES (211331354, 'USN');
-INSERT INTO AtletaPatrocinio VALUES (690549936, 'USN');
-INSERT INTO AtletaPatrocinio VALUES (214316401, 'USN');
-INSERT INTO AtletaPatrocinio VALUES (690549936, 'ON');
-INSERT INTO AtletaPatrocinio VALUES (867567309, 'ON');
-INSERT INTO AtletaPatrocinio VALUES (402135087, 'ON');
-INSERT INTO AtletaPatrocinio VALUES (327760545, '4Invictus');
-INSERT INTO AtletaPatrocinio VALUES (664020282, '4Invictus');
-INSERT INTO AtletaPatrocinio VALUES (774198838, '4Invictus');
-
--- Table: Campeonato
-
-INSERT INTO Campeonato VALUES (1,'Nacional', '2017-07-10', '2017-07-12', 'Portugal');
-INSERT INTO Campeonato VALUES (2,'Regional', '2017-08-21', '2017-08-23', 'Portugal');
-
--- Table: Categoria
-INSERT INTO Categoria VALUES ('Men´s Physique',10, 155, 195, 65, 95, 'M');
-INSERT INTO Categoria VALUES ('Men´s Classic',5, 186, 195, 86, 95, 'M');
-INSERT INTO Categoria VALUES ('Culturismo Master',5, 196, 205, 96, 105, 'M');
-INSERT INTO Categoria VALUES ('Women´s Physique',5, 145, 170, 45, 65, 'F');
-INSERT INTO Categoria VALUES ('Women´s Bikini Fitness',5, 145, 175, 50, 75, 'F');
-INSERT INTO Categoria VALUES ('Women´s Classic',5, 176, 185, 76, 85, 'F');
-
--- Table: Classificacao
--- Meter Finais xD
-INSERT INTO Classificacao VALUES(58049545, 1, 2, 'Eliminatoria');
-INSERT INTO Classificacao VALUES(730906404, 2, 0,'Eliminatoria');
-INSERT INTO Classificacao VALUES(659652361, 1, 1,'Eliminatoria');
-INSERT INTO Classificacao VALUES(658211344, 2, 5,'Eliminatoria');
-INSERT INTO Classificacao VALUES(521672026, 1, 0,'Eliminatoria');
-INSERT INTO Classificacao VALUES(526542558, 2, 2,'Eliminatoria');
-INSERT INTO Classificacao VALUES(587215721, 1, 4,'Eliminatoria');
-INSERT INTO Classificacao VALUES(793638147, 2, 5,'Eliminatoria');
-INSERT INTO Classificacao VALUES(774540744, 1, 3,'Eliminatoria');
-INSERT INTO Classificacao VALUES(232493475, 2, 1,'Eliminatoria');
-INSERT INTO Classificacao VALUES(755367564, 1, 4,'Eliminatoria');
-INSERT INTO Classificacao VALUES(640708342, 2, 7,'Eliminatoria');
-INSERT INTO Classificacao VALUES(490527968, 1, 8,'Eliminatoria');
-INSERT INTO Classificacao VALUES(108129603, 2, 1,'Eliminatoria');
-INSERT INTO Classificacao VALUES(289443867, 1, 2,'Eliminatoria');
-INSERT INTO Classificacao VALUES(482036360, 2, 0,'Eliminatoria');
-INSERT INTO Classificacao VALUES(337159639, 1, 5,'Eliminatoria');
-INSERT INTO Classificacao VALUES(812457849, 2, 3,'Eliminatoria');
-INSERT INTO Classificacao VALUES(64703234, 1, 2,'Eliminatoria');
-INSERT INTO Classificacao VALUES(842725632, 2, 0,'Eliminatoria');
-INSERT INTO Classificacao VALUES(440925049, 1, 1,'Eliminatoria');
-INSERT INTO Classificacao VALUES(586010744, 2, 5,'Eliminatoria');
-INSERT INTO Classificacao VALUES(342938934, 1, 0,'Eliminatoria');
-INSERT INTO Classificacao VALUES(706734793, 2, 2,'Eliminatoria');
-INSERT INTO Classificacao VALUES(774198838, 1, 4,'Eliminatoria');
-INSERT INTO Classificacao VALUES(192724629, 2, 5,'Eliminatoria');
-INSERT INTO Classificacao VALUES(327760545, 1, 3,'Eliminatoria');
-INSERT INTO Classificacao VALUES(664020282, 2, 1,'Eliminatoria');
-INSERT INTO Classificacao VALUES(452873720, 1, 4,'Eliminatoria');
-INSERT INTO Classificacao VALUES(279968674, 2, 7,'Eliminatoria');
-INSERT INTO Classificacao VALUES(402135087, 1, 8,'Eliminatoria');
-INSERT INTO Classificacao VALUES(867567309, 2, 1,'Eliminatoria');
-INSERT INTO Classificacao VALUES(214316401, 1, 2,'Eliminatoria');
-INSERT INTO Classificacao VALUES(690549936, 2, 0,'Eliminatoria');
-INSERT INTO Classificacao VALUES(211331354, 1, 5,'Eliminatoria');
-INSERT INTO Classificacao VALUES(337070355, 2, 3,'Eliminatoria');
-INSERT INTO Classificacao VALUES(837133825, 1, 2,'Eliminatoria');
-INSERT INTO Classificacao VALUES(393744021, 2, 0,'Eliminatoria');
-INSERT INTO Classificacao VALUES(883870725, 1, 5,'Eliminatoria');
-INSERT INTO Classificacao VALUES(149612512, 2, 3,'Eliminatoria');
-
--- Table: DataCat
-INSERT INTO DataCat VALUES('Men´s Physique', 1, 10, '15:00', 11, '15:00');
-INSERT INTO DataCat VALUES('Men´s Physique', 2, 21, '15:00', 22, '15:00');
-INSERT INTO DataCat VALUES('Women´s Physique',1, 10, '18:00', 11, '18:00');
-INSERT INTO DataCat VALUES('Women´s Physique', 2, 21, '18:00', 22, '18:00');
-INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 1, 10, '17:00', 11, '17:00');
-INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 2, 21, '17:00', 22, '17:00');
-
--- Table: Equipa
-INSERT INTO Equipa VALUES('Gold', 'Freixieiro');
-INSERT INTO Equipa VALUES('Silver', 'Amadora');
-INSERT INTO Equipa VALUES('Bronze', 'Vila Franca de Xira');
-INSERT INTO Equipa VALUES('ON', 'USA');
-INSERT INTO Equipa VALUES('Dedicated Division', 'Belgic');
-INSERT INTO Equipa VALUES('Nike', 'USA');
-INSERT INTO Equipa VALUES('USN', 'England');
-INSERT INTO Equipa VALUES('Prozis', 'Portugal');
-INSERT INTO Equipa VALUES('Gymshark', 'USA');
-
--- Table: Jurado
-INSERT INTO Jurado VALUES (767248358, 1);
-INSERT INTO Jurado VALUES (581963682, 1);
-INSERT INTO Jurado VALUES (246457932, 1);
-INSERT INTO Jurado VALUES (692598630, 1);
-INSERT INTO Jurado VALUES (186799484, 2);
-INSERT INTO Jurado VALUES (821182407, 2);
-INSERT INTO Jurado VALUES (376072462, 2);
-INSERT INTO Jurado VALUES (221811950, 2);
-
-
--- Table: Juri
-INSERT INTO Juri VALUES (1);
-INSERT INTO Juri VALUES (2);
-
 -- Table: Pais
 INSERT INTO Pais VALUES ('Portugal');
 INSERT INTO Pais VALUES ('Espanha');
 INSERT INTO Pais VALUES ('Austrália');
 INSERT INTO Pais VALUES ('USA');
-
-
--- Table: Patrocinio
-INSERT INTO Patrocinio VALUES('Nike', 4);
-INSERT INTO Patrocinio VALUES('Prozis', 10);
-INSERT INTO Patrocinio VALUES('4Invictus', 8);
-INSERT INTO Patrocinio VALUES('Gymshark', 5);
-INSERT INTO Patrocinio VALUES('Gold', 2);
-INSERT INTO Patrocinio VALUES('USN', 8);
-INSERT INTO Patrocinio VALUES('ON', 9);
-INSERT INTO Patrocinio VALUES('Dedicated Division', 17);
-
-
 
 -- Table: Pessoa
 
@@ -268,24 +91,16 @@ INSERT INTO Pessoa VALUES (821182407,'Gloria','442-4649 Ipsum. Avenue','F', '199
 INSERT INTO Pessoa VALUES (186799484,'Emily','P.O. Box 373, 1504 Ut Street','F', '1994-08-06','USA');
 INSERT INTO Pessoa VALUES (692598630,'Cara','P.O. Box 758, 1961 In Street','F', '1992-08-03','USA');
 
-
--- Table: Premio
-INSERT INTO Premio VALUES(1, 'Men´s Physique', 5000);
-INSERT INTO Premio VALUES(1, 'Women´s Physique', 4500);
-INSERT INTO Premio VALUES(1, 'Women´s Bikini Fitness', 4000);
-INSERT INTO Premio VALUES(2, 'Men´s Physique', 3000);
-INSERT INTO Premio VALUES(2, 'Women´s Physique', 2000);
-INSERT INTO Premio VALUES(2, 'Women´s Bikini Physique', 1000);
-
--- Table: TipoDePatrocinio
-INSERT INTO TipoDePatrocinio VALUES('Sapatilhas', 'Nike');
-INSERT INTO TipoDePatrocinio VALUES('Camisolas', 'Nike');
-INSERT INTO TipoDePatrocinio VALUES('Suplementos', 'Prozis');
-INSERT INTO TipoDePatrocinio VALUES('Suplementos', 'USN');
-INSERT INTO TipoDePatrocinio VALUES('Suplementos', 'ON');
-INSERT INTO TipoDePatrocinio VALUES('Roupa', 'Dedicated Division');
-INSERT INTO TipoDePatrocinio VALUES('Roupa', 'Gymshark');
-INSERT INTO TipoDePatrocinio VALUES('Dinheiro', 'Gold');
+-- Table: Equipa
+INSERT INTO Equipa VALUES('Gold', 'Freixieiro');
+INSERT INTO Equipa VALUES('Silver', 'Amadora');
+INSERT INTO Equipa VALUES('Bronze', 'Vila Franca de Xira');
+INSERT INTO Equipa VALUES('ON', 'USA');
+INSERT INTO Equipa VALUES('Dedicated Division', 'Belgic');
+INSERT INTO Equipa VALUES('Nike', 'USA');
+INSERT INTO Equipa VALUES('USN', 'England');
+INSERT INTO Equipa VALUES('Prozis', 'Portugal');
+INSERT INTO Equipa VALUES('Gymshark', 'USA');
 
 -- Table: Treinador
 INSERT INTO Treinador VALUES(872715048, 25-10-1994, 'ON');
@@ -293,3 +108,198 @@ INSERT INTO Treinador VALUES(350679118, 11-03-1992, 'Dedicated Division');
 INSERT INTO Treinador VALUES(520382478, 13-02-2010, 'USN');
 INSERT INTO Treinador VALUES(162374251, 14-08-2015, NULL);
 INSERT INTO Treinador VALUES(566223289, 15-12-1997, NULL);
+
+-- Table: TipoDePatrocinio
+INSERT INTO TipoDePatrocinio VALUES('Sapatilhas');
+INSERT INTO TipoDePatrocinio VALUES('Suplementos');
+INSERT INTO TipoDePatrocinio VALUES('Roupa');
+INSERT INTO TipoDePatrocinio VALUES('Dinheiro');
+
+-- Table: Patrocinio
+INSERT INTO Patrocinio VALUES('Nike', 4,'Sapatilhas');
+INSERT INTO Patrocinio VALUES('Prozis', 10,'Suplementos');
+INSERT INTO Patrocinio VALUES('4Invictus', 8,'Roupa');
+INSERT INTO Patrocinio VALUES('Gymshark', 5,'Roupa');
+INSERT INTO Patrocinio VALUES('Gold', 2,'Dinheiro');
+INSERT INTO Patrocinio VALUES('USN', 8,'Suplementos');
+INSERT INTO Patrocinio VALUES('ON', 9,'Suplementos');
+INSERT INTO Patrocinio VALUES('Dedicated Division', 17,'Roupa');
+
+
+
+
+-- Table: Campeonato
+
+INSERT INTO Campeonato VALUES (1,'Nacional', '2017-07-10', '2017-07-12', 'Portugal');
+INSERT INTO Campeonato VALUES (2,'Regional', '2017-08-21', '2017-08-23', 'Portugal');
+
+-- Table: Categoria
+INSERT INTO Categoria VALUES ('Men´s Physique',10, 155, 195, 65, 95, 'M');
+INSERT INTO Categoria VALUES ('Men´s Classic',10, 186, 195, 86, 95, 'M');
+INSERT INTO Categoria VALUES ('Culturismo Master',10, 196, 205, 96, 105, 'M');
+INSERT INTO Categoria VALUES ('Women´s Physique',10, 145, 170, 45, 65, 'F');
+INSERT INTO Categoria VALUES ('Women´s Bikini Fitness',10, 145, 175, 50, 75, 'F');
+INSERT INTO Categoria VALUES ('Women´s Classic',10, 176, 185, 76, 85, 'F');
+
+-- Table: DataCat
+INSERT INTO DataCat VALUES('Men´s Physique', 1, 10, '15:00', 11, '15:00');
+INSERT INTO DataCat VALUES('Men´s Physique', 2, 21, '15:00', 22, '15:00');
+INSERT INTO DataCat VALUES('Women´s Physique',1, 10, '18:00', 11, '18:00');
+INSERT INTO DataCat VALUES('Women´s Physique', 2, 21, '18:00', 22, '18:00');
+INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 1, 10, '17:00', 11, '17:00');
+INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 2, 21, '17:00', 22, '17:00');
+
+-- Table: Juri
+INSERT INTO Juri VALUES (1);
+INSERT INTO Juri VALUES (2);
+
+
+
+-- Table: Jurado
+INSERT INTO Jurado VALUES (767248358, 1);
+INSERT INTO Jurado VALUES (581963682, 1);
+INSERT INTO Jurado VALUES (246457932, 1);
+INSERT INTO Jurado VALUES (692598630, 1);
+INSERT INTO Jurado VALUES (186799484, 2);
+INSERT INTO Jurado VALUES (821182407, 2);
+INSERT INTO Jurado VALUES (376072462, 2);
+INSERT INTO Jurado VALUES (221811950, 2);
+
+
+
+
+-- Table: Premio
+INSERT INTO Premio VALUES(1, 'Men´s Physique', 5000);
+INSERT INTO Premio VALUES(1, 'Women´s Physique', 4500);
+INSERT INTO Premio VALUES(1, 'Women´s Bikini Fitness', 4000);
+INSERT INTO Premio VALUES(2, 'Men´s Physique', 3000);
+INSERT INTO Premio VALUES(2, 'Women´s Physique', 2000);
+INSERT INTO Premio VALUES(2, 'Women´s Bikini Fitness', 1000);
+
+
+
+-- Table: Atleta
+
+INSERT INTO Atleta VALUES (580495453,160,62,NULL,NULL,'Women´s Physique');
+INSERT INTO Atleta VALUES (730906404,150,58,'Gold',NULL,'Women´s Physique');
+INSERT INTO Atleta VALUES (659652361,145,65,NULL,NULL,'Women´s Physique');
+INSERT INTO Atleta VALUES (658211344,155,55,NULL,NULL,'Women´s Physique');
+INSERT INTO Atleta VALUES (521672026,167,49,'Prozis',NULL,'Women´s Physique');
+INSERT INTO Atleta VALUES (526542558,166,52,'Nike',NULL,'Women´s Physique');
+INSERT INTO Atleta VALUES (587215721,162,53,'ON',NULL,'Women´s Physique');
+INSERT INTO Atleta VALUES (793638147,150,55,'USN',NULL,'Women´s Physique');
+INSERT INTO Atleta VALUES (774540744,153,54,'Dedicated Division',NULL,'Women´s Physique');
+INSERT INTO Atleta VALUES (232493475,157,69,'Gymshark',NULL,'Women´s Physique');
+
+INSERT INTO Atleta VALUES (755367564,160,52,'ON',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (640708342,166,54,'Nike',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (490527968,153,54,'USN',NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (108129603,152,55,NULL,NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (289443867,151,58,NULL,NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (482036360,169,60,NULL,NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (337159639,172,61,NULL,NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (812457849,153,66,NULL,NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (647032341,150,65,NULL,NULL,'Women´s Bikini Fitness');
+INSERT INTO Atleta VALUES (842725632,162,64,NULL,NULL,'Women´s Bikini Fitness');
+
+INSERT INTO Atleta VALUES (440925049,175,62,'Gold',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (586010744,180,62,'Nike',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (342938934,185,62,'ON',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (706734793,172,62,'ON',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (774198838,192,62,'USN',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (192724629,183,62,'USN',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (327760545,176,62,'Dedicated Division',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (664020282,169,62,'Gymshark',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (452873720,172,62,'Prozis',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (279968674,176,62,'Prozis',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (402135087,182,62,'Gold',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (867567309,189,62,NULL,NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (214316401,174,62,'Gymshark',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (690549936,176,62,'Nike',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (211331354,177,62,NULL,NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (337070355,178,62,NULL,NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (837133825,179,62,'Gold',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (393744021,172,62,NULL,NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (883870725,173,62,'Gold',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (149612512,175,62,'Gold',NULL,'Men´s Physique');
+
+
+-- Table: AtletaPatrocinio
+INSERT INTO AtletaPatrocinio VALUES (755367564, 'Gold');
+INSERT INTO AtletaPatrocinio VALUES (640708342, 'Gold');
+INSERT INTO AtletaPatrocinio VALUES (490527968, 'Gold');
+INSERT INTO AtletaPatrocinio VALUES (108129603, 'Nike');
+INSERT INTO AtletaPatrocinio VALUES (289443867, 'Nike');
+INSERT INTO AtletaPatrocinio VALUES (482036360, 'Nike');
+INSERT INTO AtletaPatrocinio VALUES (337159639, 'Nike');
+INSERT INTO AtletaPatrocinio VALUES (812457849, 'Nike');
+INSERT INTO AtletaPatrocinio VALUES (647032341, 'Prozis');
+INSERT INTO AtletaPatrocinio VALUES (580495453, 'Prozis');
+INSERT INTO AtletaPatrocinio VALUES (659652361, 'Prozis');
+INSERT INTO AtletaPatrocinio VALUES (440925049, 'Dedicated Division');
+INSERT INTO AtletaPatrocinio VALUES (149612512, 'Dedicated Division');
+INSERT INTO AtletaPatrocinio VALUES (883870725, 'Dedicated Division');
+INSERT INTO AtletaPatrocinio VALUES (393744021, 'Gymshark');
+INSERT INTO AtletaPatrocinio VALUES (837133825, 'Gymshark');
+INSERT INTO AtletaPatrocinio VALUES (337070355, 'Gymshark');
+INSERT INTO AtletaPatrocinio VALUES (211331354, 'USN');
+INSERT INTO AtletaPatrocinio VALUES (690549936, 'USN');
+INSERT INTO AtletaPatrocinio VALUES (214316401, 'Gymshark');
+INSERT INTO AtletaPatrocinio VALUES (690549936, 'ON');
+INSERT INTO AtletaPatrocinio VALUES (402135087, 'ON');
+INSERT INTO AtletaPatrocinio VALUES (327760545, '4Invictus');
+INSERT INTO AtletaPatrocinio VALUES (664020282, '4Invictus');
+INSERT INTO AtletaPatrocinio VALUES (774198838, '4Invictus');
+
+
+
+
+
+
+-- Table: Classificacao
+-- Meter Finais xD
+INSERT INTO Classificacao VALUES(580495453, 1, 2, 'Eliminatoria');
+INSERT INTO Classificacao VALUES(730906404, 2, 0,'Eliminatoria');
+INSERT INTO Classificacao VALUES(659652361, 1, 1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(658211344, 2, 5,'Eliminatoria');
+INSERT INTO Classificacao VALUES(521672026, 1, 0,'Eliminatoria');
+INSERT INTO Classificacao VALUES(526542558, 2, 2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(587215721, 1, 4,'Eliminatoria');
+INSERT INTO Classificacao VALUES(793638147, 2, 5,'Eliminatoria');
+INSERT INTO Classificacao VALUES(774540744, 1, 3,'Eliminatoria');
+INSERT INTO Classificacao VALUES(232493475, 2, 1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(755367564, 1, 4,'Eliminatoria');
+INSERT INTO Classificacao VALUES(640708342, 2, 7,'Eliminatoria');
+INSERT INTO Classificacao VALUES(490527968, 1, 8,'Eliminatoria');
+INSERT INTO Classificacao VALUES(108129603, 2, 1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(289443867, 1, 2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(482036360, 2, 0,'Eliminatoria');
+INSERT INTO Classificacao VALUES(337159639, 1, 5,'Eliminatoria');
+INSERT INTO Classificacao VALUES(812457849, 2, 3,'Eliminatoria');
+INSERT INTO Classificacao VALUES(647032341, 1, 2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(842725632, 2, 0,'Eliminatoria');
+INSERT INTO Classificacao VALUES(440925049, 1, 1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(586010744, 2, 5,'Eliminatoria');
+INSERT INTO Classificacao VALUES(342938934, 1, 0,'Eliminatoria');
+INSERT INTO Classificacao VALUES(706734793, 2, 2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(774198838, 1, 4,'Eliminatoria');
+INSERT INTO Classificacao VALUES(192724629, 2, 5,'Eliminatoria');
+INSERT INTO Classificacao VALUES(327760545, 1, 3,'Eliminatoria');
+INSERT INTO Classificacao VALUES(664020282, 2, 1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(452873720, 1, 4,'Eliminatoria');
+INSERT INTO Classificacao VALUES(279968674, 2, 7,'Eliminatoria');
+INSERT INTO Classificacao VALUES(402135087, 1, 8,'Eliminatoria');
+INSERT INTO Classificacao VALUES(867567309, 2, 1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(214316401, 1, 1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(690549936, 2, 0,'Eliminatoria');
+INSERT INTO Classificacao VALUES(211331354, 1, 5,'Eliminatoria');
+INSERT INTO Classificacao VALUES(337070355, 2, 3,'Eliminatoria');
+INSERT INTO Classificacao VALUES(837133825, 1, 2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(393744021, 2, 0,'Eliminatoria');
+INSERT INTO Classificacao VALUES(883870725, 1, 5,'Eliminatoria');
+INSERT INTO Classificacao VALUES(149612512, 2, 3,'Eliminatoria');
+
+
+
+
+
