@@ -257,7 +257,7 @@ INSERT INTO AtletaPatrocinio VALUES (774198838, '4Invictus');
 
 
 -- Table: Classificacao
--- Meter Finais xD
+-- Eliminatoria
 INSERT INTO Classificacao VALUES(580495453, 1, 2, 'Eliminatoria');
 INSERT INTO Classificacao VALUES(730906404, 2, 0,'Eliminatoria');
 INSERT INTO Classificacao VALUES(659652361, 1, 1,'Eliminatoria');
@@ -268,6 +268,7 @@ INSERT INTO Classificacao VALUES(587215721, 1, 4,'Eliminatoria');
 INSERT INTO Classificacao VALUES(793638147, 2, 5,'Eliminatoria');
 INSERT INTO Classificacao VALUES(774540744, 1, 3,'Eliminatoria');
 INSERT INTO Classificacao VALUES(232493475, 2, 1,'Eliminatoria');
+
 INSERT INTO Classificacao VALUES(755367564, 1, 4,'Eliminatoria');
 INSERT INTO Classificacao VALUES(640708342, 2, 7,'Eliminatoria');
 INSERT INTO Classificacao VALUES(490527968, 1, 8,'Eliminatoria');
@@ -278,6 +279,7 @@ INSERT INTO Classificacao VALUES(337159639, 1, 5,'Eliminatoria');
 INSERT INTO Classificacao VALUES(812457849, 2, 3,'Eliminatoria');
 INSERT INTO Classificacao VALUES(647032341, 1, 2,'Eliminatoria');
 INSERT INTO Classificacao VALUES(842725632, 2, 0,'Eliminatoria');
+
 INSERT INTO Classificacao VALUES(440925049, 1, 1,'Eliminatoria');
 INSERT INTO Classificacao VALUES(586010744, 2, 5,'Eliminatoria');
 INSERT INTO Classificacao VALUES(342938934, 1, 0,'Eliminatoria');
@@ -299,7 +301,21 @@ INSERT INTO Classificacao VALUES(393744021, 2, 0,'Eliminatoria');
 INSERT INTO Classificacao VALUES(883870725, 1, 5,'Eliminatoria');
 INSERT INTO Classificacao VALUES(149612512, 2, 3,'Eliminatoria');
 
+-- Final
+INSERT INTO Classificacao VALUES(580495453, 1, 0,'Final');
+INSERT INTO Classificacao VALUES(730906404, 2, 1,'Final');
+INSERT INTO Classificacao VALUES(659652361, 1, 2,'Final');
+INSERT INTO Classificacao VALUES(521672026, 1, 3,'Final');
+INSERT INTO Classificacao VALUES(232493475, 2, 4,'Final');
 
+INSERT INTO Classificacao VALUES(108129603, 2, 0,'Final');
+INSERT INTO Classificacao VALUES(289443867, 1, 1,'Final');
+INSERT INTO Classificacao VALUES(482036360, 2, 2,'Final');
+INSERT INTO Classificacao VALUES(647032341, 1, 3,'Final');
+INSERT INTO Classificacao VALUES(842725632, 2, 4,'Final');
 
-
-
+INSERT INTO Classificacao VALUES(440925049, 1, 0,'Final');
+INSERT INTO Classificacao VALUES(342938934, 1, 1,'Final');
+INSERT INTO Classificacao VALUES(393744021, 2, 2,'Final');
+INSERT INTO Classificacao VALUES(690549936, 2, 3,'Final');
+INSERT INTO Classificacao VALUES(214316401, 1, 4,'Final');
