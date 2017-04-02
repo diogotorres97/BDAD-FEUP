@@ -126,8 +126,6 @@ INSERT INTO Patrocinio VALUES('ON', 9,'Suplementos');
 INSERT INTO Patrocinio VALUES('Dedicated Division', 17,'Roupa');
 
 
-
-
 -- Table: Campeonato
 
 INSERT INTO Campeonato VALUES (1,'Nacional', '2017-07-10', '2017-07-12', 'Portugal');
@@ -153,8 +151,6 @@ INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 2, 21, '17:00', 22, '17:00
 INSERT INTO Juri VALUES (1);
 INSERT INTO Juri VALUES (2);
 
-
-
 -- Table: Jurado
 INSERT INTO Jurado VALUES (767248358, 1);
 INSERT INTO Jurado VALUES (581963682, 1);
@@ -165,9 +161,6 @@ INSERT INTO Jurado VALUES (821182407, 2);
 INSERT INTO Jurado VALUES (376072462, 2);
 INSERT INTO Jurado VALUES (221811950, 2);
 
-
-
-
 -- Table: Premio
 INSERT INTO Premio VALUES(1, 'Men´s Physique', 5000);
 INSERT INTO Premio VALUES(1, 'Women´s Physique', 4500);
@@ -176,10 +169,7 @@ INSERT INTO Premio VALUES(2, 'Men´s Physique', 3000);
 INSERT INTO Premio VALUES(2, 'Women´s Physique', 2000);
 INSERT INTO Premio VALUES(2, 'Women´s Bikini Fitness', 1000);
 
-
-
 -- Table: Atleta
-
 INSERT INTO Atleta VALUES (580495453,160,62,NULL,NULL,'Women´s Physique');
 INSERT INTO Atleta VALUES (730906404,150,58,'Gold',NULL,'Women´s Physique');
 INSERT INTO Atleta VALUES (659652361,145,65,NULL,NULL,'Women´s Physique');
@@ -251,12 +241,8 @@ INSERT INTO AtletaPatrocinio VALUES (327760545, '4Invictus');
 INSERT INTO AtletaPatrocinio VALUES (664020282, '4Invictus');
 INSERT INTO AtletaPatrocinio VALUES (774198838, '4Invictus');
 
-
-
-
-
-
 -- Table: Classificacao
+
 -- Eliminatoria
 INSERT INTO Classificacao VALUES(580495453, 1, 2, 'Eliminatoria');
 INSERT INTO Classificacao VALUES(730906404, 2, 0,'Eliminatoria');
