@@ -4,10 +4,14 @@
 
 --2. Atletas que passaram a final no campeonato X.
 
---Como fazer a ligação ao campeoanto??
-
-Select DISTINCT *
-from Atleta, Classificacao
+Select DISTINCT Atleta.AtletaCC, Campeonato.ID, Classificacao.Fase
+from Atleta, Juri, Campeonato,Classificacao
 where ( Atleta.AtletaCC=Classificacao.AtletaCC
-AND
-Classificacao.Fase='Final' AND Classificacao.Pontos=0);
+  AND
+  Juri.ID = Classificacao.JuriID
+  AND
+  Juri.CampeonatoID = Campeonato.ID
+  AND
+  Campeonato.ID = '2'
+  AND
+  Classificacao.Fase='Final');
