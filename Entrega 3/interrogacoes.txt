@@ -1,0 +1,31 @@
+1. Vencedores do sexo masculino que perten�am � categoria Men's Physique e que sejam patrocinados por Prozis.
+
+2. Atletas que passaram a final no campeonato X.
+
+3. Quais os 3 patrocinios que dao mais dinheiro por campeonato.
+
+4. Qual o atleta com mais vitorias
+
+5. Quais os treinadores sem equipa que treinaram atletas
+
+6. Quais os atletas estrangeiros que participam numa competicao
+
+7. Qual o pais onde decorreram mais campeonatos
+
+8. Qual o top5 de atletas que receberam o maior premio de sempre
+
+9. Qual a equipa com mais vitorias
+
+10. Quais os 3 treinadores que tiveram mais atletas vencedores
+
+11. Para um atleta saber qual a fase mais longe que chegou
+
+12. Quantas vezes os jurados avaliaram 1 atleta
+
+--Trigers
+
+Limite maximo de pessoas numa Categoria
+Atletas so se inscreveram nas categorias do seu genero
+
+Peso e altura Categoria
+Jurado 4 juris
