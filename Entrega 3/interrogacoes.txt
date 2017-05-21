@@ -25,6 +25,7 @@
 --Trigers
 
 Limite maximo de pessoas numa Categoria
+
 Atletas so se inscreveram nas categorias do seu genero
 
 Peso e altura Categoria
