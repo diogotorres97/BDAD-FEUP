@@ -257,65 +257,132 @@ INSERT INTO AtletaPatrocinio VALUES (774198838, '4Invictus');
 
 -- Table: Classificacao
 
+--Campeonato 2
 -- Eliminatoria
-INSERT INTO Classificacao VALUES(580495453, 1, 2, 'Eliminatoria');
-INSERT INTO Classificacao VALUES(730906404, 2, 0,'Eliminatoria');
-INSERT INTO Classificacao VALUES(659652361, 1, 1,'Eliminatoria');
-INSERT INTO Classificacao VALUES(658211344, 2, 5,'Eliminatoria');
-INSERT INTO Classificacao VALUES(521672026, 1, 0,'Eliminatoria');
-INSERT INTO Classificacao VALUES(526542558, 2, 2,'Eliminatoria');
-INSERT INTO Classificacao VALUES(587215721, 1, 4,'Eliminatoria');
-INSERT INTO Classificacao VALUES(793638147, 2, 5,'Eliminatoria');
-INSERT INTO Classificacao VALUES(774540744, 1, 3,'Eliminatoria');
-INSERT INTO Classificacao VALUES(232493475, 2, 1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(580495453, 1, 2, 2, 'Eliminatoria');
+INSERT INTO Classificacao VALUES(730906404, 2, 0,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(659652361, 1, 1,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(658211344, 2, 5,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(521672026, 1, 0,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(526542558, 2, 2,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(587215721, 1, 4,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(793638147, 2, 5,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(774540744, 1, 3,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(232493475, 2, 1,2,'Eliminatoria');
 
-INSERT INTO Classificacao VALUES(755367564, 1, 4,'Eliminatoria');
-INSERT INTO Classificacao VALUES(640708342, 2, 7,'Eliminatoria');
-INSERT INTO Classificacao VALUES(490527968, 1, 8,'Eliminatoria');
-INSERT INTO Classificacao VALUES(108129603, 2, 1,'Eliminatoria');
-INSERT INTO Classificacao VALUES(289443867, 1, 2,'Eliminatoria');
-INSERT INTO Classificacao VALUES(482036360, 2, 0,'Eliminatoria');
-INSERT INTO Classificacao VALUES(337159639, 1, 5,'Eliminatoria');
-INSERT INTO Classificacao VALUES(812457849, 2, 3,'Eliminatoria');
-INSERT INTO Classificacao VALUES(647032341, 1, 2,'Eliminatoria');
-INSERT INTO Classificacao VALUES(842725632, 2, 0,'Eliminatoria');
+INSERT INTO Classificacao VALUES(755367564, 1, 4,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(640708342, 2, 7,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(490527968, 1, 8,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(108129603, 2, 1,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(289443867, 1, 2,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(482036360, 2, 0,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(337159639, 1, 5,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(812457849, 2, 3,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(647032341, 1, 2,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(842725632, 2, 0,2,'Eliminatoria');
 
-INSERT INTO Classificacao VALUES(440925049, 1, 1,'Eliminatoria');
-INSERT INTO Classificacao VALUES(586010744, 2, 5,'Eliminatoria');
-INSERT INTO Classificacao VALUES(342938934, 1, 0,'Eliminatoria');
-INSERT INTO Classificacao VALUES(706734793, 2, 2,'Eliminatoria');
-INSERT INTO Classificacao VALUES(774198838, 1, 4,'Eliminatoria');
-INSERT INTO Classificacao VALUES(192724629, 2, 5,'Eliminatoria');
-INSERT INTO Classificacao VALUES(327760545, 1, 3,'Eliminatoria');
-INSERT INTO Classificacao VALUES(664020282, 2, 1,'Eliminatoria');
-INSERT INTO Classificacao VALUES(452873720, 1, 4,'Eliminatoria');
-INSERT INTO Classificacao VALUES(279968674, 2, 7,'Eliminatoria');
-INSERT INTO Classificacao VALUES(402135087, 1, 8,'Eliminatoria');
-INSERT INTO Classificacao VALUES(867567309, 2, 1,'Eliminatoria');
-INSERT INTO Classificacao VALUES(214316401, 1, 1,'Eliminatoria');
-INSERT INTO Classificacao VALUES(690549936, 2, 0,'Eliminatoria');
-INSERT INTO Classificacao VALUES(211331354, 1, 5,'Eliminatoria');
-INSERT INTO Classificacao VALUES(337070355, 2, 3,'Eliminatoria');
-INSERT INTO Classificacao VALUES(837133825, 1, 2,'Eliminatoria');
-INSERT INTO Classificacao VALUES(393744021, 2, 0,'Eliminatoria');
-INSERT INTO Classificacao VALUES(883870725, 1, 5,'Eliminatoria');
-INSERT INTO Classificacao VALUES(149612512, 2, 3,'Eliminatoria');
+INSERT INTO Classificacao VALUES(440925049, 1, 1,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(586010744, 2, 5,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(342938934, 1, 0,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(706734793, 2, 2,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(774198838, 1, 4,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(192724629, 2, 5,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(327760545, 1, 3,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(664020282, 2, 1,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(452873720, 1, 4,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(279968674, 2, 7,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(402135087, 1, 8,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(867567309, 2, 1,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(214316401, 1, 1,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(690549936, 2, 0,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(211331354, 1, 5,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(337070355, 2, 3,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(837133825, 1, 2,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(393744021, 2, 0,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(883870725, 1, 5,2,'Eliminatoria');
+INSERT INTO Classificacao VALUES(149612512, 2, 3,2,'Eliminatoria');
 
 -- Final
-INSERT INTO Classificacao VALUES(580495453, 2, 0,'Final');
-INSERT INTO Classificacao VALUES(730906404, 2, 1,'Final');
-INSERT INTO Classificacao VALUES(659652361, 2, 2,'Final');
-INSERT INTO Classificacao VALUES(521672026, 2, 3,'Final');
-INSERT INTO Classificacao VALUES(232493475, 2, 4,'Final');
+INSERT INTO Classificacao VALUES(580495453, 2, 0,2,'Final');
+INSERT INTO Classificacao VALUES(730906404, 2, 1,2,'Final');
+INSERT INTO Classificacao VALUES(659652361, 2, 2,2,'Final');
+INSERT INTO Classificacao VALUES(521672026, 2, 3,2,'Final');
+INSERT INTO Classificacao VALUES(232493475, 2, 4,2,'Final');
 
-INSERT INTO Classificacao VALUES(108129603, 1, 0,'Final');
-INSERT INTO Classificacao VALUES(289443867, 1, 1,'Final');
-INSERT INTO Classificacao VALUES(482036360, 1, 2,'Final');
-INSERT INTO Classificacao VALUES(647032341, 1, 3,'Final');
-INSERT INTO Classificacao VALUES(842725632, 1, 4,'Final');
+INSERT INTO Classificacao VALUES(108129603, 1, 0,2,'Final');
+INSERT INTO Classificacao VALUES(289443867, 1, 1,2,'Final');
+INSERT INTO Classificacao VALUES(482036360, 1, 2,2,'Final');
+INSERT INTO Classificacao VALUES(647032341, 1, 3,2,'Final');
+INSERT INTO Classificacao VALUES(842725632, 1, 4,2,'Final');
 
-INSERT INTO Classificacao VALUES(440925049, 1, 0,'Final');
-INSERT INTO Classificacao VALUES(342938934, 1, 1,'Final');
-INSERT INTO Classificacao VALUES(393744021, 1, 2,'Final');
-INSERT INTO Classificacao VALUES(690549936, 1, 3,'Final');
-INSERT INTO Classificacao VALUES(214316401, 1, 4,'Final');
+INSERT INTO Classificacao VALUES(440925049, 1, 0,2,'Final');
+INSERT INTO Classificacao VALUES(342938934, 1, 1,2,'Final');
+INSERT INTO Classificacao VALUES(393744021, 1, 2,2,'Final');
+INSERT INTO Classificacao VALUES(690549936, 1, 3,2,'Final');
+INSERT INTO Classificacao VALUES(214316401, 1, 4,2,'Final');
+
+-- Campeonato 1
+
+--3 e 4 campeonato 1 
+
+INSERT INTO Classificacao VALUES(580495453, 3, 2,1, 'Eliminatoria');
+INSERT INTO Classificacao VALUES(730906404, 4, 0,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(659652361, 3, 1,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(658211344, 4, 5,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(521672026, 3, 0,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(526542558, 4, 2,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(587215721, 3, 4,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(793638147, 4, 5,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(774540744, 3, 3,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(232493475, 4, 1,1,'Eliminatoria');
+
+INSERT INTO Classificacao VALUES(755367564, 3, 4,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(640708342, 4, 7,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(490527968, 3, 8,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(108129603, 4, 1,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(289443867, 3, 2,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(482036360, 4, 0,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(337159639, 3, 5,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(812457849, 4, 3,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(647032341, 3, 2,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(842725632, 4, 0,1,'Eliminatoria');
+
+INSERT INTO Classificacao VALUES(440925049, 3, 1,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(586010744, 4, 5,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(342938934, 3, 0,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(706734793, 4, 2,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(774198838, 3, 4,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(192724629, 4, 5,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(327760545, 3, 3,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(664020282, 4, 1,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(452873720, 3, 4,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(279968674, 4, 7,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(402135087, 3, 8,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(867567309, 4, 1,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(214316401, 3, 1,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(690549936, 4, 0,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(211331354, 3, 5,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(337070355, 4, 3,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(837133825, 3, 2,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(393744021, 4, 0,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(883870725, 3, 5,1,'Eliminatoria');
+INSERT INTO Classificacao VALUES(149612512, 4, 3,1,'Eliminatoria');
+
+-- Final
+INSERT INTO Classificacao VALUES(580495453, 3, 0,1,'Final');
+INSERT INTO Classificacao VALUES(730906404, 3, 1,1,'Final');
+INSERT INTO Classificacao VALUES(659652361, 3, 2,1,'Final');
+INSERT INTO Classificacao VALUES(521672026, 3, 3,1,'Final');
+INSERT INTO Classificacao VALUES(232493475, 3, 4,1,'Final');
+
+INSERT INTO Classificacao VALUES(108129603, 4, 0,1,'Final');
+INSERT INTO Classificacao VALUES(289443867, 4, 1,1,'Final');
+INSERT INTO Classificacao VALUES(482036360, 4, 2,1,'Final');
+INSERT INTO Classificacao VALUES(647032341, 4, 3,1,'Final');
+INSERT INTO Classificacao VALUES(842725632, 4, 4,1,'Final');
+
+INSERT INTO Classificacao VALUES(440925049, 3, 0,1,'Final');
+INSERT INTO Classificacao VALUES(342938934, 3, 1,1,'Final');
+INSERT INTO Classificacao VALUES(393744021, 3, 2,1,'Final');
+INSERT INTO Classificacao VALUES(690549936, 3, 3,1,'Final');
+INSERT INTO Classificacao VALUES(214316401, 3, 4,1,'Final');

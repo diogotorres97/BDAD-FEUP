@@ -155,7 +155,8 @@ CREATE TABLE Classificacao (
     AtletaCC INTEGER REFERENCES Atleta (AtletaCC),
     JuriID   INTEGER REFERENCES Juri (ID),
     Pontos   INTEGER NOT NULL,
+	CampeonatoID INTEGER REFERENCES Campeonato(ID),
 	Fase TEXT,
 	CHECK(Fase == 'Eliminatoria' or Fase == 'Final'),
-	PRIMARY KEY(AtletaCC, Fase)
+	PRIMARY KEY(AtletaCC, CampeonatoID, Fase)
 );
