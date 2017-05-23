@@ -2,27 +2,29 @@
 .headers on
 .nullvalue NULL
 
---3. Quais os 3 patrocinios que dao mais dinheiro por campeonato.
+--3. Quais os 5 patrocinios que dao mais dinheiro em média por campeonato?
 
+drop view if exists atletasCampeonato;
 
--- POR CAMPEONATO , eliminar juris
-
-drop view if exists Temp;
-
-create view Temp as  select DISTINCT Atleta.AtletaCC, Campeonato.ID as CampeonatoID, Classificacao.Fase
-from Atleta, Juri, Campeonato,Classificacao
+create view atletasCampeonato as  Select DISTINCT Atleta.AtletaCC, Campeonato.ID as CampeonatoID, Classificacao.Fase
+from Atleta, Campeonato,Classificacao
 where ( Atleta.AtletaCC=Classificacao.AtletaCC
   AND
-  Juri.ID = Classificacao.JuriID
+  Campeonato.ID =  Classificacao.CampeonatoID
   AND
-  Juri.CampeonatoID = Campeonato.ID
-AND
-Classificacao.Fase = 'Eliminatoria');
+  Classificacao.Fase='Eliminatoria');
 
+drop view if exists dinheiroPatrocinioPorCampeonato;
 
-Select Nome, Temp.CampeonatoID, COUNT(PatrocinioNome) as Counter ,Valor, COUNT(PatrocinioNome)*Valor as Total
-from Atleta, AtletaPatrocinio,Patrocinio, Temp
-where (Temp.AtletaCC = Atleta.AtletaCC AND
+create view dinheiroPatrocinioPorCampeonato as 
+Select Nome, atletasCampeonato.CampeonatoID, COUNT(PatrocinioNome) as Counter ,Valor, COUNT(PatrocinioNome)*Valor as Total
+from Atleta, AtletaPatrocinio,Patrocinio, atletasCampeonato
+where (atletasCampeonato.AtletaCC = Atleta.AtletaCC AND
   Atleta.AtletaCC = AtletaPatrocinio.AtletaCC AND AtletaPatrocinio.PatrocinioNome= Patrocinio.Nome)
 group by PatrocinioNome, CampeonatoID
-ORDER BY Total desc limit 3;
+ORDER BY Total;-- desc limit 5;
+
+Select Nome, AVG(Total) as MediaTotal
+from dinheiroPatrocinioPorCampeonato
+group by Nome
+order by MediaTotal desc limit 5;

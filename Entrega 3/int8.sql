@@ -4,22 +4,18 @@
 
 -- 8.Qual o top5 de atletas que receberam o maior premio de sempre?
 
---
-
 drop view if exists vencedoresCampeonato;
 
-create view vencedoresCampeonato as  select DISTINCT Atleta.AtletaCC, Campeonato.ID, Classificacao.Fase, Atleta.CategoriaNome
-from Atleta, Juri, Campeonato,Classificacao
+create view vencedoresCampeonato as  Select DISTINCT Atleta.AtletaCC, Campeonato.ID, Classificacao.Fase, Atleta.CategoriaNome
+from Atleta, Campeonato,Classificacao
 where ( Atleta.AtletaCC=Classificacao.AtletaCC
   AND
-  Juri.ID = Classificacao.JuriID
+  Classificacao.CampeonatoID =  Campeonato.ID
   AND
-  Juri.CampeonatoID = Campeonato.ID
-AND
-Classificacao.Fase = 'Final'
-AND
-Classificacao.Pontos = '0');
-
+  Classificacao.Fase='Final'
+  AND
+  Classificacao.Pontos = '0');
+  
 
 drop view if exists premioCategoriaCampeonato;
 create view premioCategoriaCampeonato as select DISTINCT  CampeonatoID, CategoriaNome, Valor

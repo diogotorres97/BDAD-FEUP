@@ -4,30 +4,28 @@
 
 -- 9.Qual a equipa com mais vitorias?
 
-drop view if exists Temp;
+drop view if exists vencedoresCampeonato;
 
-create view Temp as  select DISTINCT Atleta.AtletaCC, Campeonato.ID, Classificacao.Fase, Atleta.EquipaNome
-from Atleta, Juri, Campeonato,Classificacao
+create view vencedoresCampeonato as  Select DISTINCT Atleta.AtletaCC, Campeonato.ID, Classificacao.Fase, Atleta.EquipaNome
+from Atleta, Campeonato,Classificacao
 where ( Atleta.AtletaCC=Classificacao.AtletaCC
   AND
-  Juri.ID = Classificacao.JuriID
+  Classificacao.CampeonatoID =  Campeonato.ID
   AND
-  Juri.CampeonatoID = Campeonato.ID
-AND
-Classificacao.Fase = 'Final'
-AND
-Classificacao.Pontos = '0');
+  Classificacao.Fase='Final'
+  AND
+  Classificacao.Pontos = '0');
 
 
-drop view if exists Temp2;
+drop view if exists vitoriasAtletas;
 
-create view Temp2 as Select Temp.AtletaCC, COUNT(Temp.AtletaCC) as Victories, Temp.EquipaNome
-from Temp
-group by Temp.AtletaCC
+create view vitoriasAtletas as Select vencedoresCampeonato.AtletaCC, COUNT(vencedoresCampeonato.AtletaCC) as Victories, vencedoresCampeonato.EquipaNome
+from vencedoresCampeonato
+group by vencedoresCampeonato.AtletaCC
 ORDER BY Victories;
 
-Select EquipaNome, COUNT(Temp2.EquipaNome)*Temp2.Victories as Victories
-from Temp2
+Select EquipaNome, COUNT(vitoriasAtletas.EquipaNome)*vitoriasAtletas.Victories as Victories
+from vitoriasAtletas
 where (EquipaNome is not NULL)
-group by Temp2.EquipaNome
+group by vitoriasAtletas.EquipaNome
 ORDER BY Victories desc limit 1;

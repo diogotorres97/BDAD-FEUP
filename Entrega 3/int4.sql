@@ -2,26 +2,26 @@
 .headers on
 .nullvalue NULL
 
---4.  Quais os juris só com jurados do mesmo pais?
-´Qual o atleta com mais vitorias
+--4. Qual o atleta com mais vitorias?
 
---sem o desc
+drop view if exists atletasVencedores;
 
-drop view if exists Temp;
-
-create view Temp as  select DISTINCT Atleta.AtletaCC, Campeonato.ID, Classificacao.Fase
-from Atleta, Juri, Campeonato,Classificacao
+create view atletasVencedores as  Select DISTINCT Atleta.AtletaCC, Campeonato.ID as CampeonatoID, Classificacao.Fase
+from Atleta, Campeonato,Classificacao
 where ( Atleta.AtletaCC=Classificacao.AtletaCC
   AND
-  Juri.ID = Classificacao.JuriID
+  Classificacao.CampeonatoID =  Campeonato.ID
   AND
-  Juri.CampeonatoID = Campeonato.ID
-AND
-Classificacao.Fase = 'Final'
-AND
-Classificacao.Pontos = '0');
+  Classificacao.Fase='Final'
+  AND
+  Classificacao.Pontos = '0');
+  
+  
+drop view if exists atletasVitorias;
+create view atletasVitorias as Select atletasVencedores.AtletaCC, COUNT(atletasVencedores.AtletaCC) as Victories
+from atletasVencedores
+group by atletasVencedores.AtletaCC
+ORDER BY Victories;
 
-Select Temp.AtletaCC, COUNT(Temp.AtletaCC) as Victories
-from Temp
-group by Temp.AtletaCC
-ORDER BY Victories desc limit 1;
+Select AtletaCC, MAX(Victories) as Victories
+from atletasVitorias;

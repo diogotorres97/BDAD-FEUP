@@ -2,11 +2,14 @@
 .headers on
 .nullvalue NULL
 
---7. Qual o 2º pais onde decorreram mais campeonatos?
+--7. Qual o segundo pais onde decorreram mais campeonatos?
 
---sem o desc e sem o limite
+drop view if exists counterPais;
 
+create view counterPais as 
 Select Campeonato.Pais, count(*) as counter
 from Campeonato
-group by Campeonato.Pais
-ORDER BY counter desc limit 1;
+group by Campeonato.Pais;
+
+Select T.Pais, MAX(T.counter) as NoCampeonatos
+from (Select * from counterPais where counterPais.counter < (Select MAX(counterPais.counter) from counterPais)) T;
