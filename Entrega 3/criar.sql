@@ -15,14 +15,12 @@ DROP TABLE IF EXISTS Pessoa;
 DROP TABLE IF EXISTS Pais;
 
 -- Table: Pais
---DROP TABLE IF EXISTS Pais;
 
 CREATE TABLE Pais (
     Nome TEXT PRIMARY KEY
 );
 
 -- Table: Pessoa
---DROP TABLE IF EXISTS Pessoa;
 
 CREATE TABLE Pessoa (
     CC             INTEGER PRIMARY KEY,
@@ -35,7 +33,6 @@ CREATE TABLE Pessoa (
 );
 
 -- Table: Equipa
---DROP TABLE IF EXISTS Equipa;
 
 CREATE TABLE Equipa (
 	Nome  TEXT PRIMARY KEY,
@@ -43,7 +40,6 @@ CREATE TABLE Equipa (
 );
 
 -- Table: Treinador
---DROP TABLE IF EXISTS Treinador;
 
 CREATE TABLE Treinador (
     TreinadorCC  INTEGER PRIMARY KEY REFERENCES Pessoa (CC),
@@ -52,14 +48,12 @@ CREATE TABLE Treinador (
 );
 
 -- Table: TipoDePatrocinio
---DROP TABLE IF EXISTS TipoDePatrocinio;
 
 CREATE TABLE TipoDePatrocinio (
     Tipo       TEXT PRIMARY KEY
 );
 
 -- Table: Patrocinio
---DROP TABLE IF EXISTS Patrocinio;
 
 CREATE TABLE Patrocinio (
     Nome  TEXT  PRIMARY KEY,
@@ -69,7 +63,6 @@ CREATE TABLE Patrocinio (
 );
 
 -- Table: Campeonato
---DROP TABLE IF EXISTS Campeonato;
 
 CREATE TABLE Campeonato (
     ID  INTEGER PRIMARY KEY,
@@ -81,7 +74,6 @@ CREATE TABLE Campeonato (
 );
 
 -- Table: Categoria
---DROP TABLE IF EXISTS Categoria;
 
 CREATE TABLE Categoria (
     Nome                TEXT PRIMARY KEY,
@@ -97,7 +89,6 @@ CREATE TABLE Categoria (
 );
 
 -- Table: DataCat
---DROP TABLE IF EXISTS DataCat;
 
 CREATE TABLE DataCat (
     NomeCategoria TEXT REFERENCES Categoria (Nome),
@@ -112,7 +103,6 @@ CREATE TABLE DataCat (
 
 
 -- Table: Juri
---DROP TABLE IF EXISTS Juri;
 
 CREATE TABLE Juri (
     ID INTEGER PRIMARY KEY,
@@ -121,7 +111,6 @@ CREATE TABLE Juri (
 
 
 -- Table: Jurado
---DROP TABLE IF EXISTS Jurado;
 
 CREATE TABLE Jurado (
 	JuradoCC     INTEGER REFERENCES Pessoa (CC),
@@ -131,7 +120,6 @@ CREATE TABLE Jurado (
 
 
 -- Table: Premio
---DROP TABLE IF EXISTS Premio;
 
 CREATE TABLE Premio (
     CampeonatoID  INTEGER REFERENCES Campeonato (ID),
@@ -143,7 +131,6 @@ CREATE TABLE Premio (
 
 
 -- Table: Atleta
---DROP TABLE IF EXISTS Atleta;
 
 CREATE TABLE Atleta (
     AtletaCC          INTEGER PRIMARY KEY REFERENCES Pessoa (CC),
@@ -155,7 +142,6 @@ CREATE TABLE Atleta (
 );
 
 -- Table: AtletaPatrocinio
---DROP TABLE IF EXISTS AtletaPatrocinio;
 
 CREATE TABLE AtletaPatrocinio (
     AtletaCC   INTEGER REFERENCES Atleta (AtletaCC),
@@ -165,7 +151,6 @@ CREATE TABLE AtletaPatrocinio (
 
 
 -- Table: Classificacao
---DROP TABLE IF EXISTS Classificacao;
 
 CREATE TABLE Classificacao (
     AtletaCC INTEGER REFERENCES Atleta (AtletaCC),
