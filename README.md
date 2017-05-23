@@ -1,6 +1,6 @@
 # BDAD-FEUP
 
-##Relatório Parte 2
+## Relatório Parte 2
 
 -> Corrigir UML (DONE)
 
@@ -9,13 +9,13 @@
 -> Corrigir dependências funcionais de acordo com os apontamentos da stora e alterando a classificação e o juri que foram alterados agora no UML
 
 
-##Relatório Parte 3
+## Relatório Parte 3
 
 -> Adicionar as querys em linguagem natural
 
 -> Adicionar os triggers em linguagem natural
 
-##SQL
+## SQL
 
 -> Acrecentar cenas no povoar.sql para ter melhores testes
 
