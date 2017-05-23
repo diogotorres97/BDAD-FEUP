@@ -21,7 +21,7 @@
 
 ->Verificar querys e tentar arranjar diferentes porque algumas sao muito identicas e alterar nomes das views usadas
 
-->Trigger 1 e o 3 são o mesmo, arranjar outro trigger
+->Trigger 1 e o 3 são o mesmo, arranjar outro trigger (DONE)
 
 ->Acrescentar mais testes no verifica dos triggers para cobrir os casos todos
 
@@ -29,8 +29,8 @@
 
 ->Int3, 
 
--> Trigger data categoria e data de campeonato
+-> Trigger data categoria e data de campeonato (DONE)
 
--> Quantas vezes dois atletas de se defrontaram?
+-> 11.Quantas vezes dois atletas de se defrontaram?
 
--> Quais os juris só com jurados do mesmo pais?
+-> 13.Quais os juris só com jurados do mesmo pais?

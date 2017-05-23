@@ -2,33 +2,29 @@
 .headers on
 .nullvalue NULL
 
--- 10.Quais os 3 treinadores que tiveram mais atletas vencedores
+-- 10.Quais os 3 treinadores que tiveram mais atletas vencedores?
 
+drop view if exists atletasVencedores;
 
-drop view if exists Temp;
-
-create view Temp as  select DISTINCT Atleta.AtletaCC, Campeonato.ID, Classificacao.Fase, Atleta.TreinadorCC
-from Atleta, Juri, Campeonato,Classificacao
+create view atletasVencedores as  Select DISTINCT Atleta.AtletaCC, Campeonato.ID, Classificacao.Fase, Atleta.TreinadorCC
+from Atleta, Campeonato,Classificacao
 where ( Atleta.AtletaCC=Classificacao.AtletaCC
   AND
-  Juri.ID = Classificacao.JuriID
+  Classificacao.CampeonatoID =  Campeonato.ID
   AND
-  Juri.CampeonatoID = Campeonato.ID
-AND
-Classificacao.Fase = 'Final'
-AND
-Classificacao.Pontos = '0');
+  Classificacao.Fase='Final'
+  AND
+  Classificacao.Pontos = '0');
+ 
+drop view if exists atletasVitorias;
 
-
-drop view if exists Temp2;
-
-create view Temp2 as Select Temp.AtletaCC, COUNT(DISTINCT Temp.AtletaCC) as Victories, Temp.TreinadorCC
-from Temp
-group by Temp.AtletaCC
+create view atletasVitorias as Select atletasVencedores.AtletaCC, COUNT(atletasVencedores.AtletaCC) as Victories, atletasVencedores.TreinadorCC
+from atletasVencedores
+group by atletasVencedores.AtletaCC
 ORDER BY Victories;
 
-Select TreinadorCC, COUNT(Temp2.TreinadorCC) as CounterVictories
-from Temp2
+Select TreinadorCC, COUNT(atletasVitorias.TreinadorCC) as CounterVictories
+from atletasVitorias
 where (TreinadorCC is not NULL)
-group by Temp2.TreinadorCC
+group by atletasVitorias.TreinadorCC
 ORDER BY CounterVictories desc limit 3;

@@ -1,3 +1,3 @@
---Remove gatilho 1
+--Remove gatilho 3
 
 drop trigger if exists checkDateCatCampeonato;

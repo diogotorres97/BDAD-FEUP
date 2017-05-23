@@ -12,4 +12,4 @@ from Campeonato
 group by Campeonato.Pais;
 
 Select T.Pais, MAX(T.counter) as NoCampeonatos
-from (Select * from counterPais where counterPais.counter < (Select MAX(counterPais.counter) from counterPais)) T;
+from (Select * from counterPais where counterPais.counter NOT IN (Select MAX(counterPais.counter) from counterPais)) T;

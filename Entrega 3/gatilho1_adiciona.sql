@@ -1,4 +1,4 @@
--- Gatilho que impede a inscrição de um atleta se o seu peso e altura  
+-- Gatilho que impede a inscrição de um atleta se o seu peso e altura e genero
 -- nao estiverem dentro dos parametros da categoria a qual se quer inscrever
 
 --Peso e altura Categoria, genero
