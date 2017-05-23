@@ -2,7 +2,7 @@
 .headers on
 .nullvalue NULL
 
--- 6.Quais os atletas estrangeiros que participam numa competicao?
+-- 6.Quais os atletas estrangeiros que participam numa competicao X?
 
 
 drop view if exists Temp;
@@ -13,7 +13,9 @@ where ( Atleta.AtletaCC=Classificacao.AtletaCC
   AND
   Juri.ID = Classificacao.JuriID
   AND
-  Juri.CampeonatoID = Campeonato.ID
+  Juri.CampeonatoID = '1'
+  AND
+  Campeonato.ID = '1'
 AND
 Classificacao.Fase = 'Eliminatoria');
 

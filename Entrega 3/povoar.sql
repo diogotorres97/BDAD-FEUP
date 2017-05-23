@@ -130,9 +130,9 @@ INSERT INTO Patrocinio VALUES('Dedicated Division', 17,'Roupa');
 
 INSERT INTO Campeonato VALUES (1,'Nacional', '2017-07-10', '2017-07-12', 'Portugal');
 INSERT INTO Campeonato VALUES (2,'Regional', '2017-08-21', '2017-08-23', 'Portugal');
-INSERT INTO Campeonato VALUES (3,'Nacional', '2017-08-21', '2017-08-23', 'Espanha');
-INSERT INTO Campeonato VALUES (4,'Regional', '2017-08-21', '2017-08-23', 'Espanha');
-INSERT INTO Campeonato VALUES (5,'Regional', '2017-08-21', '2017-08-23', 'Espanha');
+INSERT INTO Campeonato VALUES (3,'Nacional', '2017-11-21', '2017-11-23', 'Espanha');
+INSERT INTO Campeonato VALUES (4,'Regional', '2017-12-21', '2017-12-23', 'Espanha');
+INSERT INTO Campeonato VALUES (5,'Regional', '2018-10-21', '2018-10-23', 'Espanha');
 
 
 -- Table: Categoria
@@ -141,15 +141,15 @@ INSERT INTO Categoria VALUES ('Men´s Classic',10, 186, 195, 86, 95, 'M');
 INSERT INTO Categoria VALUES ('Culturismo Master',10, 196, 205, 96, 105, 'M');
 INSERT INTO Categoria VALUES ('Women´s Physique',10, 145, 170, 45, 65, 'F');
 INSERT INTO Categoria VALUES ('Women´s Bikini Fitness',10, 145, 175, 50, 75, 'F');
-INSERT INTO Categoria VALUES ('Women´s Classic',10, 176, 185, 76, 85, 'F');
+INSERT INTO Categoria VALUES ('Women´s Classic',10, 176, 185, 76, 85, 'F'); 
 
 -- Table: DataCat
-INSERT INTO DataCat VALUES('Men´s Physique', 1, 10, '15:00', 11, '15:00');
-INSERT INTO DataCat VALUES('Men´s Physique', 2, 21, '15:00', 22, '15:00');
-INSERT INTO DataCat VALUES('Women´s Physique',1, 10, '18:00', 11, '18:00');
-INSERT INTO DataCat VALUES('Women´s Physique', 2, 21, '18:00', 22, '18:00');
-INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 1, 10, '17:00', 11, '17:00');
-INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 2, 21, '17:00', 22, '17:00');
+INSERT INTO DataCat VALUES('Men´s Physique', 1, '2017-07-10', '15:00', '2017-07-11', '15:00');
+INSERT INTO DataCat VALUES('Men´s Physique', 2, '2017-08-21', '15:00', '2017-08-22', '15:00');
+INSERT INTO DataCat VALUES('Women´s Physique',1, '2017-07-10', '18:00', '2017-07-11', '18:00');
+INSERT INTO DataCat VALUES('Women´s Physique', 2, '2017-08-21', '18:00', '2017-08-22', '18:00');
+INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 1, '2017-07-10', '17:00', '2017-07-11', '17:00');
+INSERT INTO DataCat VALUES('Women´s Bikini Fitness', 2, '2017-08-21', '17:00', '2017-08-22', '17:00');
 
 -- Table: Juri
 INSERT INTO Juri VALUES (1,2);

@@ -2,22 +2,8 @@
 .headers on
 .nullvalue NULL
 
--- 11.Para um atleta saber qual a fase mais longe que chegou
+-- 11.Quantas vezes dois atletas de se defrontaram?
 
-drop view if exists Temp;
 
-create view Temp as  select DISTINCT Atleta.AtletaCC, Campeonato.ID as CampeonatoID, Classificacao.Fase
-from Atleta, Juri, Campeonato,Classificacao
-where ( Atleta.AtletaCC='580495453'
-AND
-Classificacao.AtletaCC = '580495453'
-  AND
-  Juri.ID = Classificacao.JuriID
-  AND
-  Juri.CampeonatoID = Campeonato.ID);
-  
-  Select * 
-  from Temp
-  order by Temp.Fase DESC limit 1;
-  
+
 

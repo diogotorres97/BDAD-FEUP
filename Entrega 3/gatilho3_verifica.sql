@@ -2,13 +2,8 @@
 .headers on
 .nullvalue NULL
 
-Delete FROM Atleta WHERE AtletaCC = 110095596;
+INSERT INTO DataCat VALUES('Men´s Physique', 1, '2017-07-15', '15:00', '2017-07-11', '15:00');
+INSERT INTO DataCat VALUES('Men´s Physique', 2, '2017-08-21', '15:00', '2017-08-25', '15:00');
 
-INSERT INTO Atleta VALUES (110095596,194,95,'Gold',350679118,'Men´s Physique');
-
-Delete FROM Atleta WHERE AtletaCC = 110095596;
-
-INSERT INTO Atleta VALUES (110095596,194,94,'Gold',350679118,'Women´s Physique');
-
-
-
+INSERT INTO DataCat VALUES('Men´s Physique', 3, '2017-11-21', '15:00', '2017-11-23', '15:00');
+INSERT INTO DataCat VALUES('Men´s Physique', 4, '2017-12-21', '15:00', '2017-12-23',  '15:00');

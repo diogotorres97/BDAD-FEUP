@@ -93,9 +93,9 @@ CREATE TABLE Categoria (
 CREATE TABLE DataCat (
     NomeCategoria TEXT REFERENCES Categoria (Nome),
 	IDCampeonato  TEXT REFERENCES Campeonato (ID),
-    DiaElim           INTEGER NOT NULL,
+    DiaElim           DATE NOT NULL,
     HoraElim          TEXT NOT NULL,
-	DiaFinal          INTEGER NOT NULL,
+	DiaFinal          DATE NOT NULL,
     HoraFinal          TEXT NOT NULL,
 	CHECK(DiaElim<=DiaFinal),
 	PRIMARY KEY(NomeCategoria,IDCampeonato)

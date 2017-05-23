@@ -25,3 +25,12 @@
 
 ->Acrescentar mais testes no verifica dos triggers para cobrir os casos todos
 
+->Querys mostrar os nomes para além do ID
+
+->Int3, 
+
+-> Trigger data categoria e data de campeonato
+
+-> Quantas vezes dois atletas de se defrontaram?
+
+-> Quais os juris só com jurados do mesmo pais?

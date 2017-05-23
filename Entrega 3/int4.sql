@@ -2,7 +2,10 @@
 .headers on
 .nullvalue NULL
 
---4. Qual o atleta com mais vitorias
+--4.  Quais os juris só com jurados do mesmo pais?
+´Qual o atleta com mais vitorias
+
+--sem o desc
 
 drop view if exists Temp;
 

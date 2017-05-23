@@ -4,6 +4,8 @@
 
 -- 8.Qual o top5 de atletas que receberam o maior premio de sempre?
 
+--
+
 drop view if exists vencedoresCampeonato;
 
 create view vencedoresCampeonato as  select DISTINCT Atleta.AtletaCC, Campeonato.ID, Classificacao.Fase, Atleta.CategoriaNome
