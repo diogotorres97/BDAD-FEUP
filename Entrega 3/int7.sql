@@ -2,7 +2,7 @@
 .headers on
 .nullvalue NULL
 
---7. Qual o pais onde decorreram mais campeonatos
+--7. Qual o pais onde decorreram mais campeonatos?
 
 Select Campeonato.Pais, count(*) as counter
 from Campeonato

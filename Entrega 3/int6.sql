@@ -2,7 +2,7 @@
 .headers on
 .nullvalue NULL
 
--- 6.Quais os atletas estrangeiros que participam numa competicao
+-- 6.Quais os atletas estrangeiros que participam numa competicao?
 
 
 drop view if exists Temp;
@@ -18,6 +18,7 @@ AND
 Classificacao.Fase = 'Eliminatoria');
 
 
-Select Temp.AtletaCC, Pessoa.Pais
+Select DISTINCT Temp.AtletaCC, Pessoa.Pais
 from Temp, Pessoa
-where(Temp.AtletaCC = Pessoa.CC AND Temp.Pais <> Pessoa.Pais);
+where(Temp.AtletaCC = Pessoa.CC AND Temp.Pais <> Pessoa.Pais)
+ORDER BY Pessoa.Pais ASC;

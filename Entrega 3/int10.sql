@@ -25,7 +25,7 @@ drop view if exists Temp2;
 create view Temp2 as Select Temp.AtletaCC, COUNT(DISTINCT Temp.AtletaCC) as Victories, Temp.TreinadorCC
 from Temp
 group by Temp.AtletaCC
-ORDER BY Victories desc limit 3;
+ORDER BY Victories;
 
 Select TreinadorCC, COUNT(Temp2.TreinadorCC) as CounterVictories
 from Temp2

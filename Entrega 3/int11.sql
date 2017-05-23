@@ -6,7 +6,7 @@
 
 drop view if exists Temp;
 
-create view Temp as  select DISTINCT Atleta.AtletaCC, Campeonato.ID, Classificacao.Fase
+create view Temp as  select DISTINCT Atleta.AtletaCC, Campeonato.ID as CampeonatoID, Classificacao.Fase
 from Atleta, Juri, Campeonato,Classificacao
 where ( Atleta.AtletaCC='580495453'
 AND

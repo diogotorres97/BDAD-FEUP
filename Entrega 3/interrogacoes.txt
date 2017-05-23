@@ -31,5 +31,3 @@ Atletas so se inscreveram nas categorias do seu genero
 Peso e altura Categoria
 Jurado 4 juris
 
-
-Acrescentar trenaria Atleta Campeonato Juri

@@ -184,7 +184,7 @@ INSERT INTO Premio VALUES(2, 'Women´s Physique', 2000);
 INSERT INTO Premio VALUES(2, 'Women´s Bikini Fitness', 1000);
 
 -- Table: Atleta
-INSERT INTO Atleta VALUES (580495453,160,62,NULL,350679118,'Women´s Physique');
+INSERT INTO Atleta VALUES (580495453,160,62,'Nike',350679118,'Women´s Physique');
 INSERT INTO Atleta VALUES (730906404,150,58,'Gold',162374251,'Women´s Physique');
 INSERT INTO Atleta VALUES (659652361,145,65,NULL,NULL,'Women´s Physique');
 INSERT INTO Atleta VALUES (658211344,155,55,NULL,162374251,'Women´s Physique');
@@ -211,7 +211,7 @@ INSERT INTO Atleta VALUES (586010744,180,62,'Nike',NULL,'Men´s Physique');
 INSERT INTO Atleta VALUES (342938934,185,62,'ON',162374251,'Men´s Physique');
 INSERT INTO Atleta VALUES (706734793,172,62,'ON',350679118,'Men´s Physique');
 INSERT INTO Atleta VALUES (774198838,192,62,'USN',NULL,'Men´s Physique');
-INSERT INTO Atleta VALUES (192724629,183,62,'USN',NULL,'Men´s Physique');
+INSERT INTO Atleta VALUES (192724629,183,62,'USN',566223289,'Men´s Physique');
 INSERT INTO Atleta VALUES (327760545,176,62,'Dedicated Division',350679118,'Men´s Physique');
 INSERT INTO Atleta VALUES (664020282,169,62,'Gymshark',NULL,'Men´s Physique');
 INSERT INTO Atleta VALUES (452873720,172,62,'Prozis',NULL,'Men´s Physique');
@@ -233,6 +233,7 @@ INSERT INTO AtletaPatrocinio VALUES (755367564, 'Gold');
 INSERT INTO AtletaPatrocinio VALUES (640708342, 'Gold');
 INSERT INTO AtletaPatrocinio VALUES (490527968, 'Gold');
 INSERT INTO AtletaPatrocinio VALUES (108129603, 'Nike');
+INSERT INTO AtletaPatrocinio VALUES (580495453, 'Nike');
 INSERT INTO AtletaPatrocinio VALUES (289443867, 'Nike');
 INSERT INTO AtletaPatrocinio VALUES (482036360, 'Nike');
 INSERT INTO AtletaPatrocinio VALUES (337159639, 'Nike');
@@ -375,14 +376,14 @@ INSERT INTO Classificacao VALUES(659652361, 3, 2,1,'Final');
 INSERT INTO Classificacao VALUES(521672026, 3, 3,1,'Final');
 INSERT INTO Classificacao VALUES(232493475, 3, 4,1,'Final');
 
-INSERT INTO Classificacao VALUES(108129603, 4, 0,1,'Final');
-INSERT INTO Classificacao VALUES(289443867, 4, 1,1,'Final');
+INSERT INTO Classificacao VALUES(108129603, 4, 1,1,'Final');
+INSERT INTO Classificacao VALUES(289443867, 4, 0,1,'Final');
 INSERT INTO Classificacao VALUES(482036360, 4, 2,1,'Final');
 INSERT INTO Classificacao VALUES(647032341, 4, 3,1,'Final');
 INSERT INTO Classificacao VALUES(842725632, 4, 4,1,'Final');
 
-INSERT INTO Classificacao VALUES(440925049, 3, 0,1,'Final');
-INSERT INTO Classificacao VALUES(342938934, 3, 1,1,'Final');
+INSERT INTO Classificacao VALUES(440925049, 3, 1,1,'Final');
+INSERT INTO Classificacao VALUES(342938934, 3, 0,1,'Final');
 INSERT INTO Classificacao VALUES(393744021, 3, 2,1,'Final');
 INSERT INTO Classificacao VALUES(690549936, 3, 3,1,'Final');
 INSERT INTO Classificacao VALUES(214316401, 3, 4,1,'Final');

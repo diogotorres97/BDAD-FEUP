@@ -1,15 +1,27 @@
 # BDAD-FEUP
 
--Alterações do trabalho anterior
+Relatório Parte 2
 
--Alterar UML
+-> Corrigir UML (DONE)
 
--Acrescentar cenas no povoar.sql
+-> Corrigir relacional de acordo com UML (DONE)
 
--Verificar querys e tentar arranjar diferentes porque algumas sao muito identicas e alterar nomes das views usadas
+-> Corrigir dependências funcionais de acordo com os apontamentos da stora e alterando a classificação e o juri que foram alterados agora no UML
 
--Trigger 1 e o 3 são o mesmo, arranjar outro trigger
 
--Acrescentar mais testes no verifica dos triggers para cobrir os casos todos
+Relatório Parte 3
 
--Fazer relatório
+-> Adicionar as querys em linguagem natural
+
+-> Adicionar os triggers em linguagem natural
+
+SQL
+
+-> Acrecentar cenas no povoar.sql para ter melhores testes
+
+->Verificar querys e tentar arranjar diferentes porque algumas sao muito identicas e alterar nomes das views usadas
+
+->Trigger 1 e o 3 são o mesmo, arranjar outro trigger
+
+->Acrescentar mais testes no verifica dos triggers para cobrir os casos todos
+

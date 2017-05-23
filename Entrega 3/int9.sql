@@ -2,7 +2,7 @@
 .headers on
 .nullvalue NULL
 
--- 9.Qual a equipa com mais vitorias
+-- 9.Qual a equipa com mais vitorias?
 
 drop view if exists Temp;
 
@@ -21,13 +21,13 @@ Classificacao.Pontos = '0');
 
 drop view if exists Temp2;
 
-create view Temp2 as Select Temp.AtletaCC, COUNT(DISTINCT Temp.AtletaCC) as Victories, Temp.EquipaNome
+create view Temp2 as Select Temp.AtletaCC, COUNT(Temp.AtletaCC) as Victories, Temp.EquipaNome
 from Temp
 group by Temp.AtletaCC
-ORDER BY Victories desc limit 3;
+ORDER BY Victories;
 
-Select EquipaNome, COUNT(Temp2.EquipaNome) as CounterVictories
+Select EquipaNome, COUNT(Temp2.EquipaNome)*Temp2.Victories as Victories
 from Temp2
 where (EquipaNome is not NULL)
 group by Temp2.EquipaNome
-ORDER BY CounterVictories desc limit 1;
+ORDER BY Victories desc limit 1;

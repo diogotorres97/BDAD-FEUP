@@ -4,10 +4,10 @@
 
 --1. Vencedores do sexo masculino que perten�am � categoria Men's Physique e que sejam patrocinados por Dedicated Division.
 
--- Atleta so se pode inscrever em categorias masculinas? trigger?
 
 
-Select DISTINCT *
+
+Select DISTINCT Atleta.AtletaCC, Atleta.CategoriaNome, AtletaPatrocinio.PatrocinioNome, Classificacao.Fase, Classificacao.Pontos
 from Atleta, AtletaPatrocinio, Classificacao
 where ( Atleta.AtletaCC=Classificacao.AtletaCC AND
  Atleta.AtletaCC = AtletaPatrocinio.AtletaCC

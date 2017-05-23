@@ -17,5 +17,6 @@ where ( Atleta.AtletaCC=Classificacao.AtletaCC
   Select Temp.AtletaCC, JuriID, COUNT(Temp.AtletaCC) as NumberAvaliations
   from Temp
   where(Temp.JuriID = '1')
-  group by(Temp.AtletaCC);
+  group by(Temp.AtletaCC)
+  order by NumberAvaliations DESC;
   
