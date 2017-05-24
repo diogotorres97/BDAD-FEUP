@@ -4,7 +4,7 @@
 
 -- 12.Quantas vezes um determinado juri avaliou os atletas?
 
-drop view if exists countJurisAvaliations;
+
 create view countJurisAvaliations as  select DISTINCT Atleta.AtletaCC, Campeonato.ID, Classificacao.Fase, Classificacao.JuriID
 from Atleta, Juri, Campeonato,Classificacao
 where ( Atleta.AtletaCC=Classificacao.AtletaCC
@@ -19,4 +19,6 @@ where ( Atleta.AtletaCC=Classificacao.AtletaCC
   where(countJurisAvaliations.JuriID = '1')
   group by(countJurisAvaliations.AtletaCC)
   order by NumberAvaliations DESC;
+  
+ drop view if exists countJurisAvaliations;
   

@@ -4,9 +4,11 @@
 
 --2. Atletas que passaram a final no campeonato 2.
 
-Select DISTINCT Atleta.AtletaCC, Campeonato.ID as CampeonatoID, Classificacao.Fase
-from Atleta, Campeonato,Classificacao
+Select DISTINCT Atleta.AtletaCC, Pessoa.Nome, Campeonato.ID as CampeonatoID, Classificacao.Fase
+from Atleta, Campeonato,Classificacao, Pessoa
 where ( Atleta.AtletaCC=Classificacao.AtletaCC
+AND
+ Atleta.AtletaCC = Pessoa.CC
   AND
   Classificacao.CampeonatoID = '2'
   AND

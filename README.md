@@ -19,18 +19,16 @@
 
 -> Acrecentar cenas no povoar.sql para ter melhores testes
 
-->Verificar querys e tentar arranjar diferentes porque algumas sao muito identicas e alterar nomes das views usadas
+->Verificar querys e tentar arranjar diferentes porque algumas sao muito identicas e alterar nomes das views usadas (DONE)
 
 ->Trigger 1 e o 3 são o mesmo, arranjar outro trigger (DONE)
 
 ->Acrescentar mais testes no verifica dos triggers para cobrir os casos todos
 
-->Querys mostrar os nomes para além do ID
-
-->Int3, 
+->Querys mostrar os nomes para além do ID (DONE)
 
 -> Trigger data categoria e data de campeonato (DONE)
 
--> 11.Quantas vezes dois atletas de se defrontaram?
+-> 11.Quantas vezes dois atletas de se defrontaram? (DONE)
 
--> 13.Quais os juris só com jurados do mesmo pais?
+-> 13.Quais os juris só com jurados do mesmo pais? (DONE)

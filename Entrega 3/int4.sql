@@ -4,8 +4,6 @@
 
 --4. Qual o atleta com mais vitorias?
 
-drop view if exists atletasVencedores;
-
 create view atletasVencedores as  Select DISTINCT Atleta.AtletaCC, Campeonato.ID as CampeonatoID, Classificacao.Fase
 from Atleta, Campeonato,Classificacao
 where ( Atleta.AtletaCC=Classificacao.AtletaCC
@@ -17,11 +15,16 @@ where ( Atleta.AtletaCC=Classificacao.AtletaCC
   Classificacao.Pontos = '0');
   
   
-drop view if exists atletasVitorias;
 create view atletasVitorias as Select atletasVencedores.AtletaCC, COUNT(atletasVencedores.AtletaCC) as Victories
 from atletasVencedores
 group by atletasVencedores.AtletaCC
 ORDER BY Victories;
 
-Select AtletaCC, MAX(Victories) as Victories
-from atletasVitorias;
+
+Select AtletaCC, Pessoa.Nome, MAX(Victories) as Victories
+from atletasVitorias, Pessoa
+where atletasVitorias.AtletaCC = Pessoa.CC;
+
+
+drop view if exists atletasVencedores;
+drop view if exists atletasVitorias;
